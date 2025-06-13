@@ -1,0 +1,28 @@
+{
+  "name": "amplify_be_faq",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Compileinfy/amplify_be_faq.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Compileinfy/amplify_be_faq/issues"
+  },
+  "homepage": "https://github.com/Compileinfy/amplify_be_faq#readme",
+  "description": "",
+  "dependencies": {
+    "@aws-amplify/backend": "^1.16.1",
+    "@aws-amplify/backend-cli": "^1.8.0",
+    "aws-amplify": "^6.15.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
