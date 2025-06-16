@@ -15,9 +15,7 @@ export const createTodo = /* GraphQL */ `mutation CreateTodo(
   createTodo(condition: $condition, input: $input) {
     content
     createdAt
-    done
     id
-    owner
     updatedAt
     __typename
   }
@@ -33,9 +31,7 @@ export const deleteTodo = /* GraphQL */ `mutation DeleteTodo(
   deleteTodo(condition: $condition, input: $input) {
     content
     createdAt
-    done
     id
-    owner
     updatedAt
     __typename
   }
@@ -51,9 +47,7 @@ export const updateTodo = /* GraphQL */ `mutation UpdateTodo(
   updateTodo(condition: $condition, input: $input) {
     content
     createdAt
-    done
     id
-    owner
     updatedAt
     __typename
   }

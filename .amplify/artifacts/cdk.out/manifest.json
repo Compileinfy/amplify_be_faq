@@ -1,19 +1,19 @@
 {
-  "version": "44.0.0",
+  "version": "41.0.0",
   "artifacts": {
-    "amplify-amplifybefaq-user-sandbox-15145546bf.assets": {
+    "amplify-amplifybefaq-admin-sandbox-4fc1add85e.assets": {
       "type": "cdk:asset-manifest",
       "properties": {
-        "file": "amplify-amplifybefaq-user-sandbox-15145546bf.assets.json",
+        "file": "amplify-amplifybefaq-admin-sandbox-4fc1add85e.assets.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
       }
     },
-    "amplify-amplifybefaq-user-sandbox-15145546bf": {
+    "amplify-amplifybefaq-admin-sandbox-4fc1add85e": {
       "type": "aws:cloudformation:stack",
       "environment": "aws://unknown-account/unknown-region",
       "properties": {
-        "templateFile": "amplify-amplifybefaq-user-sandbox-15145546bf.template.json",
+        "templateFile": "amplify-amplifybefaq-admin-sandbox-4fc1add85e.template.json",
         "terminationProtection": false,
         "tags": {
           "amplify:deployment-type": "sandbox",
@@ -22,11 +22,11 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/22f0284d4ce5823de9958c8b2f21b6a516081e39a0069dd299fcf46a559d84e5.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c2e941ee8e342039e0de9f5c049851bf281e1eca4bf62127cf1cd0ed5c1653ef.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
-          "amplify-amplifybefaq-user-sandbox-15145546bf.assets"
+          "amplify-amplifybefaq-admin-sandbox-4fc1add85e.assets"
         ],
         "lookupRole": {
           "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
@@ -35,10 +35,10 @@
         }
       },
       "dependencies": [
-        "amplify-amplifybefaq-user-sandbox-15145546bf.assets"
+        "amplify-amplifybefaq-admin-sandbox-4fc1add85e.assets"
       ],
       "metadata": {
-        "/amplify-amplifybefaq-user-sandbox-15145546bf": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e": [
           {
             "type": "aws:cdk:stack-tags",
             "data": [
@@ -53,241 +53,241 @@
             ]
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/deploymentType": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/deploymentType": [
           {
             "type": "aws:cdk:logicalId",
             "data": "deploymentType"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/region": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/region": [
           {
             "type": "aws:cdk:logicalId",
             "data": "region"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/auth/amplifyAuth/UserPool/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/auth/amplifyAuth/UserPool/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthUserPool4BA7F805"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/auth/amplifyAuth/UserPoolAppClient/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/auth/amplifyAuth/UserPoolAppClient/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthUserPoolAppClient2626C6F8"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/auth/amplifyAuth/IdentityPool": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/auth/amplifyAuth/IdentityPool": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthIdentityPool3FDE84CC"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/auth/amplifyAuth/authenticatedUserRole/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/auth/amplifyAuth/authenticatedUserRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthauthenticatedUserRoleD8DA3689"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/auth/amplifyAuth/unauthenticatedUserRole/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/auth/amplifyAuth/unauthenticatedUserRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthunauthenticatedUserRole2B524D9E"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/auth/amplifyAuth/IdentityPoolRoleAttachment": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/auth/amplifyAuth/IdentityPoolRoleAttachment": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthIdentityPoolRoleAttachment045F17C8"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/auth/CDKMetadata/Default": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/auth/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/auth/CDKMetadata/Condition": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/auth/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/auth/amplifyamplifybefaqusersandbox15145546bfauthamplifyAuthUserPoolD1021E00Ref": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/auth/amplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthUserPoolDCBA62BDRef": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifyamplifybefaqusersandbox15145546bfauthamplifyAuthUserPoolD1021E00Ref"
+            "data": "amplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthUserPoolDCBA62BDRef"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/auth/amplifyamplifybefaqusersandbox15145546bfauthamplifyAuthUserPoolAppClientD418CA89Ref": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/auth/amplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthUserPoolAppClient4154A04CRef": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifyamplifybefaqusersandbox15145546bfauthamplifyAuthUserPoolAppClientD418CA89Ref"
+            "data": "amplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthUserPoolAppClient4154A04CRef"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/auth/amplifyamplifybefaqusersandbox15145546bfauthamplifyAuthIdentityPool4ECE3A07Ref": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/auth/amplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthIdentityPoolAC5A14A3Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifyamplifybefaqusersandbox15145546bfauthamplifyAuthIdentityPool4ECE3A07Ref"
+            "data": "amplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthIdentityPoolAC5A14A3Ref"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/auth/amplifyamplifybefaqusersandbox15145546bfauthamplifyAuthauthenticatedUserRole4540EC4ARef": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/auth/amplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthauthenticatedUserRole0DC14122Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifyamplifybefaqusersandbox15145546bfauthamplifyAuthauthenticatedUserRole4540EC4ARef"
+            "data": "amplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthauthenticatedUserRole0DC14122Ref"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/auth/amplifyamplifybefaqusersandbox15145546bfauthamplifyAuthunauthenticatedUserRole459AFE99Ref": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/auth/amplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthunauthenticatedUserRole7BE615E3Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifyamplifybefaqusersandbox15145546bfauthamplifyAuthunauthenticatedUserRole459AFE99Ref"
+            "data": "amplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthunauthenticatedUserRole7BE615E3Ref"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/auth.NestedStack/auth.NestedStackResource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/auth.NestedStack/auth.NestedStackResource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "auth179371D7"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/userPoolId": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/userPoolId": [
           {
             "type": "aws:cdk:logicalId",
             "data": "userPoolId"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/webClientId": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/webClientId": [
           {
             "type": "aws:cdk:logicalId",
             "data": "webClientId"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/identityPoolId": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/identityPoolId": [
           {
             "type": "aws:cdk:logicalId",
             "data": "identityPoolId"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/authRegion": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/authRegion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "authRegion"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/allowUnauthenticatedIdentities": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/allowUnauthenticatedIdentities": [
           {
             "type": "aws:cdk:logicalId",
             "data": "allowUnauthenticatedIdentities"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/signupAttributes": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/signupAttributes": [
           {
             "type": "aws:cdk:logicalId",
             "data": "signupAttributes"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/usernameAttributes": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/usernameAttributes": [
           {
             "type": "aws:cdk:logicalId",
             "data": "usernameAttributes"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/verificationMechanisms": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/verificationMechanisms": [
           {
             "type": "aws:cdk:logicalId",
             "data": "verificationMechanisms"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/passwordPolicyMinLength": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/passwordPolicyMinLength": [
           {
             "type": "aws:cdk:logicalId",
             "data": "passwordPolicyMinLength"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/passwordPolicyRequirements": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/passwordPolicyRequirements": [
           {
             "type": "aws:cdk:logicalId",
             "data": "passwordPolicyRequirements"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/mfaConfiguration": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/mfaConfiguration": [
           {
             "type": "aws:cdk:logicalId",
             "data": "mfaConfiguration"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/mfaTypes": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/mfaTypes": [
           {
             "type": "aws:cdk:logicalId",
             "data": "mfaTypes"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/socialProviders": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/socialProviders": [
           {
             "type": "aws:cdk:logicalId",
             "data": "socialProviders"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/oauthCognitoDomain": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/oauthCognitoDomain": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthCognitoDomain"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/oauthScope": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/oauthScope": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthScope"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/oauthRedirectSignIn": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/oauthRedirectSignIn": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthRedirectSignIn"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/oauthRedirectSignOut": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/oauthRedirectSignOut": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthRedirectSignOut"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/oauthResponseType": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/oauthResponseType": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthResponseType"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/oauthClientId": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/oauthClientId": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthClientId"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/groups": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/groups": [
           {
             "type": "aws:cdk:logicalId",
             "data": "groups"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/GraphQLAPI/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/GraphQLAPI/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataGraphQLAPI42A6FA33"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/GraphQLAPI/TransformerSchema": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/GraphQLAPI/TransformerSchema": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataGraphQLAPITransformerSchemaFF50A789"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/GraphQLAPI/NONE_DS": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/GraphQLAPI/NONE_DS": [
           {
             "type": "graphqltransformer:resourceName",
             "data": "NONE_DS"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/GraphQLAPI/NONE_DS/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/GraphQLAPI/NONE_DS/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataGraphQLAPINONEDS684BF699"
@@ -297,139 +297,139 @@
             "data": "NONE_DS"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyTableManager/AmplifyManagedTableIsCompleteRole/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyTableManager/AmplifyManagedTableIsCompleteRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AmplifyManagedTableIsCompleteRoleF825222C"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AmplifyManagedTableOnEventRoleB4E71DEA"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/DefaultPolicy/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AmplifyManagedTableOnEventRoleDefaultPolicyF6DABCB6"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-onEvent/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-onEvent/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "TableManagerCustomProviderframeworkonEvent1DFC2ECC"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-isComplete/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-isComplete/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "TableManagerCustomProviderframeworkisComplete2E51021B"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AmplifyTableWaiterStateMachineRole470BE899"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/DefaultPolicy/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AmplifyTableWaiterStateMachineRoleDefaultPolicy89F3836A"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AmplifyTableWaiterStateMachine060600BC"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyTableManager/CDKMetadata/Default": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyTableManager/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyTableManager/CDKMetadata/Condition": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyTableManager/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyTableManager/reference-to-amplifyamplifybefaqusersandbox15145546bfdataamplifyDataGraphQLAPID064DFDCApiId": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyTableManager/reference-to-amplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataGraphQLAPI8CF3DBCCApiId": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifyamplifybefaqusersandbox15145546bfdataamplifyDataGraphQLAPID064DFDCApiId"
+            "data": "referencetoamplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataGraphQLAPI8CF3DBCCApiId"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyTableManager/amplifyamplifybefaqusersandbox15145546bfdataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEventBD769685Arn": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyTableManager/amplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent6E7A74FFArn": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifyamplifybefaqusersandbox15145546bfdataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEventBD769685Arn"
+            "data": "amplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent6E7A74FFArn"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyTableManager.NestedStack/AmplifyTableManager.NestedStackResource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyTableManager.NestedStack/AmplifyTableManager.NestedStackResource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource86290833"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/DynamoDBModelTableReadIOPS": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/DynamoDBModelTableReadIOPS": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBModelTableReadIOPS"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/DynamoDBModelTableWriteIOPS": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/DynamoDBModelTableWriteIOPS": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBModelTableWriteIOPS"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/DynamoDBBillingMode": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/DynamoDBBillingMode": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBBillingMode"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/DynamoDBEnablePointInTimeRecovery": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/DynamoDBEnablePointInTimeRecovery": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBEnablePointInTimeRecovery"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/DynamoDBEnableServerSideEncryption": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/DynamoDBEnableServerSideEncryption": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBEnableServerSideEncryption"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/HasEnvironmentParameter": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/HasEnvironmentParameter": [
           {
             "type": "aws:cdk:logicalId",
             "data": "HasEnvironmentParameter"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/ShouldUsePayPerRequestBilling": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/ShouldUsePayPerRequestBilling": [
           {
             "type": "aws:cdk:logicalId",
             "data": "ShouldUsePayPerRequestBilling"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/ShouldUsePointInTimeRecovery": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/ShouldUsePointInTimeRecovery": [
           {
             "type": "aws:cdk:logicalId",
             "data": "ShouldUsePointInTimeRecovery"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/TodoTable": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/TodoTable": [
           {
             "type": "graphqltransformer:resourceName",
             "data": "Todo"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/TodoTable/Default/Default": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/TodoTable/Default/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "TodoTable"
@@ -439,31 +439,31 @@
             "data": "Todo"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/CustomTableTodoTable": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/CustomTableTodoTable": [
           {
             "type": "graphqltransformer:resourceName",
             "data": "Todo"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/GetAttTodoTableStreamArn": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/GetAttTodoTableStreamArn": [
           {
             "type": "aws:cdk:logicalId",
             "data": "GetAttTodoTableStreamArn"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/GetAttTodoTableName": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/GetAttTodoTableName": [
           {
             "type": "aws:cdk:logicalId",
             "data": "GetAttTodoTableName"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/TodoIAMRole": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/TodoIAMRole": [
           {
             "type": "graphqltransformer:resourceName",
             "data": "TodoIAMRole"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/TodoIAMRole/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/TodoIAMRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "TodoIAMRole2DA8E66E"
@@ -473,13 +473,13 @@
             "data": "TodoIAMRole"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/TodoDataSource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/TodoDataSource": [
           {
             "type": "graphqltransformer:resourceName",
             "data": "TodoTable"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/TodoDataSource/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/TodoDataSource/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "TodoDataSource"
@@ -489,7 +489,7 @@
             "data": "TodoTable"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/QuerygetTodoauth0Function/QuerygetTodoauth0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/QuerygetTodoauth0Function/QuerygetTodoauth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "QuerygetTodoauth0FunctionQuerygetTodoauth0FunctionAppSyncFunction846D8436"
@@ -499,7 +499,7 @@
             "data": "QuerygetTodoauth0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/QuerygetTodopostAuth0Function/QuerygetTodopostAuth0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/QuerygetTodopostAuth0Function/QuerygetTodopostAuth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "QuerygetTodopostAuth0FunctionQuerygetTodopostAuth0FunctionAppSyncFunction6BE14593"
@@ -509,7 +509,7 @@
             "data": "QuerygetTodopostAuth0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/QueryGetTodoDataResolverFn/QueryGetTodoDataResolverFn.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/QueryGetTodoDataResolverFn/QueryGetTodoDataResolverFn.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "QueryGetTodoDataResolverFnQueryGetTodoDataResolverFnAppSyncFunctionE2B57DAD"
@@ -519,7 +519,7 @@
             "data": "QueryGetTodoDataResolverFn"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/queryGetTodoResolver": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/queryGetTodoResolver": [
           {
             "type": "aws:cdk:logicalId",
             "data": "GetTodoResolver"
@@ -529,7 +529,7 @@
             "data": "Query.getTodo"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/QuerylistTodosauth0Function/QuerylistTodosauth0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/QuerylistTodosauth0Function/QuerylistTodosauth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "QuerylistTodosauth0FunctionQuerylistTodosauth0FunctionAppSyncFunction7D761961"
@@ -539,7 +539,7 @@
             "data": "QuerylistTodosauth0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/QuerylistTodospostAuth0Function/QuerylistTodospostAuth0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/QuerylistTodospostAuth0Function/QuerylistTodospostAuth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "QuerylistTodospostAuth0FunctionQuerylistTodospostAuth0FunctionAppSyncFunction154D8577"
@@ -549,7 +549,7 @@
             "data": "QuerylistTodospostAuth0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/QueryListTodosDataResolverFn/QueryListTodosDataResolverFn.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/QueryListTodosDataResolverFn/QueryListTodosDataResolverFn.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "QueryListTodosDataResolverFnQueryListTodosDataResolverFnAppSyncFunctionF825FE47"
@@ -559,7 +559,7 @@
             "data": "QueryListTodosDataResolverFn"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/queryListTodosResolver": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/queryListTodosResolver": [
           {
             "type": "aws:cdk:logicalId",
             "data": "ListTodoResolver"
@@ -569,7 +569,7 @@
             "data": "Query.listTodos"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/MutationcreateTodoinit0Function/MutationcreateTodoinit0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/MutationcreateTodoinit0Function/MutationcreateTodoinit0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationcreateTodoinit0FunctionMutationcreateTodoinit0FunctionAppSyncFunction54DE5B8B"
@@ -579,7 +579,7 @@
             "data": "MutationcreateTodoinit0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/MutationcreateTodoauth0Function/MutationcreateTodoauth0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/MutationcreateTodoauth0Function/MutationcreateTodoauth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationcreateTodoauth0FunctionMutationcreateTodoauth0FunctionAppSyncFunction21817E36"
@@ -589,7 +589,7 @@
             "data": "MutationcreateTodoauth0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/MutationcreateTodopostAuth0Function/MutationcreateTodopostAuth0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/MutationcreateTodopostAuth0Function/MutationcreateTodopostAuth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationcreateTodopostAuth0FunctionMutationcreateTodopostAuth0FunctionAppSyncFunctionED59EB9F"
@@ -599,7 +599,7 @@
             "data": "MutationcreateTodopostAuth0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/MutationCreateTodoDataResolverFn/MutationCreateTodoDataResolverFn.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/MutationCreateTodoDataResolverFn/MutationCreateTodoDataResolverFn.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationCreateTodoDataResolverFnMutationCreateTodoDataResolverFnAppSyncFunction900EC5CF"
@@ -609,7 +609,7 @@
             "data": "MutationCreateTodoDataResolverFn"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/mutationCreateTodoResolver": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/mutationCreateTodoResolver": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CreateTodoResolver"
@@ -619,7 +619,7 @@
             "data": "Mutation.createTodo"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/MutationupdateTodoinit0Function/MutationupdateTodoinit0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/MutationupdateTodoinit0Function/MutationupdateTodoinit0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationupdateTodoinit0FunctionMutationupdateTodoinit0FunctionAppSyncFunction1B95BB19"
@@ -629,7 +629,7 @@
             "data": "MutationupdateTodoinit0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/MutationupdateTodoauth0Function/MutationupdateTodoauth0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/MutationupdateTodoauth0Function/MutationupdateTodoauth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationupdateTodoauth0FunctionMutationupdateTodoauth0FunctionAppSyncFunction1E4A3112"
@@ -639,7 +639,7 @@
             "data": "MutationupdateTodoauth0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/MutationupdateTodopostAuth0Function/MutationupdateTodopostAuth0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/MutationupdateTodopostAuth0Function/MutationupdateTodopostAuth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationupdateTodopostAuth0FunctionMutationupdateTodopostAuth0FunctionAppSyncFunction50C507D7"
@@ -649,7 +649,7 @@
             "data": "MutationupdateTodopostAuth0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/MutationUpdateTodoDataResolverFn/MutationUpdateTodoDataResolverFn.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/MutationUpdateTodoDataResolverFn/MutationUpdateTodoDataResolverFn.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationUpdateTodoDataResolverFnMutationUpdateTodoDataResolverFnAppSyncFunctionBC238C49"
@@ -659,7 +659,7 @@
             "data": "MutationUpdateTodoDataResolverFn"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/mutationUpdateTodoResolver": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/mutationUpdateTodoResolver": [
           {
             "type": "aws:cdk:logicalId",
             "data": "UpdateTodoResolver"
@@ -669,7 +669,7 @@
             "data": "Mutation.updateTodo"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/MutationdeleteTodoauth0Function/MutationdeleteTodoauth0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/MutationdeleteTodoauth0Function/MutationdeleteTodoauth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationdeleteTodoauth0FunctionMutationdeleteTodoauth0FunctionAppSyncFunctionC82C218C"
@@ -679,7 +679,7 @@
             "data": "MutationdeleteTodoauth0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/MutationdeleteTodopostAuth0Function/MutationdeleteTodopostAuth0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/MutationdeleteTodopostAuth0Function/MutationdeleteTodopostAuth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationdeleteTodopostAuth0FunctionMutationdeleteTodopostAuth0FunctionAppSyncFunction483271A2"
@@ -689,7 +689,7 @@
             "data": "MutationdeleteTodopostAuth0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/MutationDeleteTodoDataResolverFn/MutationDeleteTodoDataResolverFn.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/MutationDeleteTodoDataResolverFn/MutationDeleteTodoDataResolverFn.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationDeleteTodoDataResolverFnMutationDeleteTodoDataResolverFnAppSyncFunction3879153F"
@@ -699,7 +699,7 @@
             "data": "MutationDeleteTodoDataResolverFn"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/mutationDeleteTodoResolver": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/mutationDeleteTodoResolver": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DeleteTodoResolver"
@@ -709,7 +709,7 @@
             "data": "Mutation.deleteTodo"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/SubscriptiononCreateTodoauth0Function/SubscriptiononCreateTodoauth0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/SubscriptiononCreateTodoauth0Function/SubscriptiononCreateTodoauth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononCreateTodoauth0FunctionSubscriptiononCreateTodoauth0FunctionAppSyncFunction042EF9E1"
@@ -719,7 +719,7 @@
             "data": "SubscriptiononCreateTodoauth0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/SubscriptiononCreateTodopostAuth0Function/SubscriptiononCreateTodopostAuth0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/SubscriptiononCreateTodopostAuth0Function/SubscriptiononCreateTodopostAuth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononCreateTodopostAuth0FunctionSubscriptiononCreateTodopostAuth0FunctionAppSyncFunction18E34C4E"
@@ -729,7 +729,7 @@
             "data": "SubscriptiononCreateTodopostAuth0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/SubscriptionOnCreateTodoDataResolverFn/SubscriptionOnCreateTodoDataResolverFn.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/SubscriptionOnCreateTodoDataResolverFn/SubscriptionOnCreateTodoDataResolverFn.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptionOnCreateTodoDataResolverFnSubscriptionOnCreateTodoDataResolverFnAppSyncFunction462A70C9"
@@ -739,7 +739,7 @@
             "data": "SubscriptionOnCreateTodoDataResolverFn"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/subscriptionOnCreateTodoResolver": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/subscriptionOnCreateTodoResolver": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononCreateTodoResolver"
@@ -749,7 +749,7 @@
             "data": "Subscription.onCreateTodo"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/SubscriptiononUpdateTodoauth0Function/SubscriptiononUpdateTodoauth0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/SubscriptiononUpdateTodoauth0Function/SubscriptiononUpdateTodoauth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononUpdateTodoauth0FunctionSubscriptiononUpdateTodoauth0FunctionAppSyncFunction80D0DFA3"
@@ -759,7 +759,7 @@
             "data": "SubscriptiononUpdateTodoauth0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/SubscriptiononUpdateTodopostAuth0Function/SubscriptiononUpdateTodopostAuth0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/SubscriptiononUpdateTodopostAuth0Function/SubscriptiononUpdateTodopostAuth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononUpdateTodopostAuth0FunctionSubscriptiononUpdateTodopostAuth0FunctionAppSyncFunction04445BC7"
@@ -769,7 +769,7 @@
             "data": "SubscriptiononUpdateTodopostAuth0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/SubscriptionOnUpdateTodoDataResolverFn/SubscriptionOnUpdateTodoDataResolverFn.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/SubscriptionOnUpdateTodoDataResolverFn/SubscriptionOnUpdateTodoDataResolverFn.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptionOnUpdateTodoDataResolverFnSubscriptionOnUpdateTodoDataResolverFnAppSyncFunction523DF0E4"
@@ -779,7 +779,7 @@
             "data": "SubscriptionOnUpdateTodoDataResolverFn"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/subscriptionOnUpdateTodoResolver": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/subscriptionOnUpdateTodoResolver": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononUpdateTodoResolver"
@@ -789,7 +789,7 @@
             "data": "Subscription.onUpdateTodo"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/SubscriptiononDeleteTodoauth0Function/SubscriptiononDeleteTodoauth0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/SubscriptiononDeleteTodoauth0Function/SubscriptiononDeleteTodoauth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononDeleteTodoauth0FunctionSubscriptiononDeleteTodoauth0FunctionAppSyncFunctionF69F2220"
@@ -799,7 +799,7 @@
             "data": "SubscriptiononDeleteTodoauth0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/SubscriptiononDeleteTodopostAuth0Function/SubscriptiononDeleteTodopostAuth0Function.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/SubscriptiononDeleteTodopostAuth0Function/SubscriptiononDeleteTodopostAuth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononDeleteTodopostAuth0FunctionSubscriptiononDeleteTodopostAuth0FunctionAppSyncFunctionE131CBE7"
@@ -809,7 +809,7 @@
             "data": "SubscriptiononDeleteTodopostAuth0Function"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/SubscriptionOnDeleteTodoDataResolverFn/SubscriptionOnDeleteTodoDataResolverFn.AppSyncFunction": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/SubscriptionOnDeleteTodoDataResolverFn/SubscriptionOnDeleteTodoDataResolverFn.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptionOnDeleteTodoDataResolverFnSubscriptionOnDeleteTodoDataResolverFnAppSyncFunction3E641E8C"
@@ -819,7 +819,7 @@
             "data": "SubscriptionOnDeleteTodoDataResolverFn"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/subscriptionOnDeleteTodoResolver": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/subscriptionOnDeleteTodoResolver": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononDeleteTodoResolver"
@@ -829,165 +829,157 @@
             "data": "Subscription.onDeleteTodo"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/TodoOwnerDataResolverFn/TodoOwnerDataResolverFn.AppSyncFunction": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "TodoOwnerDataResolverFnTodoOwnerDataResolverFnAppSyncFunction0C7BF45B"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "TodoOwnerDataResolverFn"
-          }
-        ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/todoOwnerResolver": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "TodoownerResolver"
-          },
-          {
-            "type": "graphqltransformer:resourceName",
-            "data": "Todo.owner"
-          }
-        ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/CDKMetadata/Default": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/CDKMetadata/Condition": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/reference-to-amplifyamplifybefaqusersandbox15145546bfdataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource88C9B516Outputs.amplifyamplifybefaqusersandbox15145546bfdataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEventBD769685Arn": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/reference-to-amplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource866E86EFOutputs.amplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent6E7A74FFArn": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifyamplifybefaqusersandbox15145546bfdataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource88C9B516Outputsamplifyamplifybefaqusersandbox15145546bfdataamplifyDataAmplifyTableManagerTableManagerCustoD9A468E2"
+            "data": "referencetoamplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource866E86EFOutputsamplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataAmplifyTableManagerTableManagerCusB3075D49"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/reference-to-amplifyamplifybefaqusersandbox15145546bfdataamplifyDataGraphQLAPID064DFDCApiId": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/reference-to-amplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataGraphQLAPI8CF3DBCCApiId": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifyamplifybefaqusersandbox15145546bfdataamplifyDataGraphQLAPID064DFDCApiId"
+            "data": "referencetoamplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataGraphQLAPI8CF3DBCCApiId"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/reference-to-amplifyamplifybefaqusersandbox15145546bfdataamplifyDataGraphQLAPINONEDSF40E97E2Name": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/reference-to-amplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataGraphQLAPINONEDSA311FAD7Name": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifyamplifybefaqusersandbox15145546bfdataamplifyDataGraphQLAPINONEDSF40E97E2Name"
+            "data": "referencetoamplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataGraphQLAPINONEDSA311FAD7Name"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/reference-to-amplifyamplifybefaqusersandbox15145546bfauthNestedStackauthNestedStackResource1FCB6023Outputs.amplifyamplifybefaqusersandbox15145546bfauthamplifyAuthauthenticatedUserRole4540EC4ARef": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/reference-to-amplifyamplifybefaqadminsandbox4fc1add85eauthNestedStackauthNestedStackResourceE62581F1Outputs.amplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthauthenticatedUserRole0DC14122Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifyamplifybefaqusersandbox15145546bfauthNestedStackauthNestedStackResource1FCB6023Outputsamplifyamplifybefaqusersandbox15145546bfauthamplifyAuthauthenticatedUserRole4540EC4ARef"
+            "data": "referencetoamplifyamplifybefaqadminsandbox4fc1add85eauthNestedStackauthNestedStackResourceE62581F1Outputsamplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthauthenticatedUserRole0DC14122Ref"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/reference-to-amplifyamplifybefaqusersandbox15145546bfauthNestedStackauthNestedStackResource1FCB6023Outputs.amplifyamplifybefaqusersandbox15145546bfauthamplifyAuthunauthenticatedUserRole459AFE99Ref": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/reference-to-amplifyamplifybefaqadminsandbox4fc1add85eauthNestedStackauthNestedStackResourceE62581F1Outputs.amplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthunauthenticatedUserRole7BE615E3Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifyamplifybefaqusersandbox15145546bfauthNestedStackauthNestedStackResource1FCB6023Outputsamplifyamplifybefaqusersandbox15145546bfauthamplifyAuthunauthenticatedUserRole459AFE99Ref"
+            "data": "referencetoamplifyamplifybefaqadminsandbox4fc1add85eauthNestedStackauthNestedStackResourceE62581F1Outputsamplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthunauthenticatedUserRole7BE615E3Ref"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo/reference-to-amplifyamplifybefaqusersandbox15145546bfauthNestedStackauthNestedStackResource1FCB6023Outputs.amplifyamplifybefaqusersandbox15145546bfauthamplifyAuthIdentityPool4ECE3A07Ref": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo/reference-to-amplifyamplifybefaqadminsandbox4fc1add85eauthNestedStackauthNestedStackResourceE62581F1Outputs.amplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthIdentityPoolAC5A14A3Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifyamplifybefaqusersandbox15145546bfauthNestedStackauthNestedStackResource1FCB6023Outputsamplifyamplifybefaqusersandbox15145546bfauthamplifyAuthIdentityPool4ECE3A07Ref"
+            "data": "referencetoamplifyamplifybefaqadminsandbox4fc1add85eauthNestedStackauthNestedStackResourceE62581F1Outputsamplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthIdentityPoolAC5A14A3Ref"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/Todo.NestedStack/Todo.NestedStackResource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/Todo.NestedStack/Todo.NestedStackResource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataTodoNestedStackTodoNestedStackResource551CEA56"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AuthRolePolicy01/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataAuthRolePolicy01567A5654"
+          }
+        ],
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/UnauthRolePolicy01/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyDataUnauthRolePolicy01355B9DCF"
+          }
+        ],
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucket9CCB4ACA"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Policy/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Policy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucketPolicyF1C1C548"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/AutoDeleteObjectsCustomResource/Default": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/AutoDeleteObjectsCustomResource/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucketAutoDeleteObjectsCustomResource437F26F5"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/AwsCliLayer/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/AwsCliLayer/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentAwsCliLayerE322F905"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/CustomResource-1536MiB/Default": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/CustomResource-1536MiB/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB21775929"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/DynamoDBModelTableReadIOPS": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/DynamoDBModelTableReadIOPS": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBModelTableReadIOPS"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/DynamoDBModelTableWriteIOPS": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/DynamoDBModelTableWriteIOPS": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBModelTableWriteIOPS"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/DynamoDBBillingMode": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/DynamoDBBillingMode": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBBillingMode"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/DynamoDBEnablePointInTimeRecovery": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/DynamoDBEnablePointInTimeRecovery": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBEnablePointInTimeRecovery"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/DynamoDBEnableServerSideEncryption": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/DynamoDBEnableServerSideEncryption": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBEnableServerSideEncryption"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/LatestNodeRuntimeMap": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/LatestNodeRuntimeMap": [
           {
             "type": "aws:cdk:logicalId",
             "data": "LatestNodeRuntimeMap"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
           {
             "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
             "data": true
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB": [
           {
             "type": "aws:cdk:is-custom-resource-handler-singleton",
             "data": true
@@ -1005,200 +997,200 @@
             "data": 2
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleA41FC8C2"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/DefaultPolicy/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleDefaultPolicyFF1C635B"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBC5D8AB21"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/modelIntrospectionSchemaBucket/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/modelIntrospectionSchemaBucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "modelIntrospectionSchemaBucketF566B665"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/modelIntrospectionSchemaBucket/Policy/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/modelIntrospectionSchemaBucket/Policy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "modelIntrospectionSchemaBucketPolicy4DAB0D15"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/modelIntrospectionSchemaBucket/AutoDeleteObjectsCustomResource/Default": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/modelIntrospectionSchemaBucket/AutoDeleteObjectsCustomResource/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "modelIntrospectionSchemaBucketAutoDeleteObjectsCustomResourceFE57309F"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/modelIntrospectionSchemaBucketDeployment/AwsCliLayer/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/modelIntrospectionSchemaBucketDeployment/AwsCliLayer/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "modelIntrospectionSchemaBucketDeploymentAwsCliLayer13C432F7"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/modelIntrospectionSchemaBucketDeployment/CustomResource-1536MiB/Default": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/modelIntrospectionSchemaBucketDeployment/CustomResource-1536MiB/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "modelIntrospectionSchemaBucketDeploymentCustomResource1536MiB104B97EC"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/AMPLIFY_DATA_GRAPHQL_ENDPOINTParameter/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/AMPLIFY_DATA_GRAPHQL_ENDPOINTParameter/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AMPLIFYDATAGRAPHQLENDPOINTParameter1C2CBB16"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_BUCKET_NAMEParameter/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_BUCKET_NAMEParameter/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AMPLIFYDATAMODELINTROSPECTIONSCHEMABUCKETNAMEParameter47BF4F44"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_KEYParameter/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_KEYParameter/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AMPLIFYDATAMODELINTROSPECTIONSCHEMAKEYParameterB6AEAE8A"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/AMPLIFY_DATA_DEFAULT_NAMEParameter/Resource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/AMPLIFY_DATA_DEFAULT_NAMEParameter/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AMPLIFYDATADEFAULTNAMEParameterE7C23CC4"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/CDKMetadata/Default": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/CDKMetadata/Condition": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/reference-to-amplifyamplifybefaqusersandbox15145546bfauthNestedStackauthNestedStackResource1FCB6023Outputs.amplifyamplifybefaqusersandbox15145546bfauthamplifyAuthUserPoolD1021E00Ref": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/reference-to-amplifyamplifybefaqadminsandbox4fc1add85eauthNestedStackauthNestedStackResourceE62581F1Outputs.amplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthUserPoolDCBA62BDRef": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifyamplifybefaqusersandbox15145546bfauthNestedStackauthNestedStackResource1FCB6023Outputsamplifyamplifybefaqusersandbox15145546bfauthamplifyAuthUserPoolD1021E00Ref"
+            "data": "referencetoamplifyamplifybefaqadminsandbox4fc1add85eauthNestedStackauthNestedStackResourceE62581F1Outputsamplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthUserPoolDCBA62BDRef"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/reference-to-amplifyamplifybefaqusersandbox15145546bfauthNestedStackauthNestedStackResource1FCB6023Outputs.amplifyamplifybefaqusersandbox15145546bfauthamplifyAuthauthenticatedUserRole4540EC4ARef": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/reference-to-amplifyamplifybefaqadminsandbox4fc1add85eauthNestedStackauthNestedStackResourceE62581F1Outputs.amplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthauthenticatedUserRole0DC14122Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifyamplifybefaqusersandbox15145546bfauthNestedStackauthNestedStackResource1FCB6023Outputsamplifyamplifybefaqusersandbox15145546bfauthamplifyAuthauthenticatedUserRole4540EC4ARef"
+            "data": "referencetoamplifyamplifybefaqadminsandbox4fc1add85eauthNestedStackauthNestedStackResourceE62581F1Outputsamplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthauthenticatedUserRole0DC14122Ref"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/reference-to-amplifyamplifybefaqusersandbox15145546bfauthNestedStackauthNestedStackResource1FCB6023Outputs.amplifyamplifybefaqusersandbox15145546bfauthamplifyAuthunauthenticatedUserRole459AFE99Ref": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/reference-to-amplifyamplifybefaqadminsandbox4fc1add85eauthNestedStackauthNestedStackResourceE62581F1Outputs.amplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthunauthenticatedUserRole7BE615E3Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifyamplifybefaqusersandbox15145546bfauthNestedStackauthNestedStackResource1FCB6023Outputsamplifyamplifybefaqusersandbox15145546bfauthamplifyAuthunauthenticatedUserRole459AFE99Ref"
+            "data": "referencetoamplifyamplifybefaqadminsandbox4fc1add85eauthNestedStackauthNestedStackResourceE62581F1Outputsamplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthunauthenticatedUserRole7BE615E3Ref"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/reference-to-amplifyamplifybefaqusersandbox15145546bfauthNestedStackauthNestedStackResource1FCB6023Outputs.amplifyamplifybefaqusersandbox15145546bfauthamplifyAuthIdentityPool4ECE3A07Ref": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/reference-to-amplifyamplifybefaqadminsandbox4fc1add85eauthNestedStackauthNestedStackResourceE62581F1Outputs.amplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthIdentityPoolAC5A14A3Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifyamplifybefaqusersandbox15145546bfauthNestedStackauthNestedStackResource1FCB6023Outputsamplifyamplifybefaqusersandbox15145546bfauthamplifyAuthIdentityPool4ECE3A07Ref"
+            "data": "referencetoamplifyamplifybefaqadminsandbox4fc1add85eauthNestedStackauthNestedStackResourceE62581F1Outputsamplifyamplifybefaqadminsandbox4fc1add85eauthamplifyAuthIdentityPoolAC5A14A3Ref"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyamplifybefaqusersandbox15145546bfdataamplifyDataGraphQLAPID064DFDCApiId": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataGraphQLAPI8CF3DBCCApiId": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifyamplifybefaqusersandbox15145546bfdataamplifyDataGraphQLAPID064DFDCApiId"
+            "data": "amplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataGraphQLAPI8CF3DBCCApiId"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyamplifybefaqusersandbox15145546bfdataamplifyDataGraphQLAPID064DFDCGraphQLUrl": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataGraphQLAPI8CF3DBCCGraphQLUrl": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifyamplifybefaqusersandbox15145546bfdataamplifyDataGraphQLAPID064DFDCGraphQLUrl"
+            "data": "amplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataGraphQLAPI8CF3DBCCGraphQLUrl"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data/amplifyamplifybefaqusersandbox15145546bfdataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB8DEBFAA8DestinationBucketArn": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data/amplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB2C39B438DestinationBucketArn": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifyamplifybefaqusersandbox15145546bfdataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB8DEBFAA8DestinationBucketArn"
+            "data": "amplifyamplifybefaqadminsandbox4fc1add85edataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB2C39B438DestinationBucketArn"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/data.NestedStack/data.NestedStackResource": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/data.NestedStack/data.NestedStackResource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "data7552DF31"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/awsAppsyncApiId": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/awsAppsyncApiId": [
           {
             "type": "aws:cdk:logicalId",
             "data": "awsAppsyncApiId"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/awsAppsyncApiEndpoint": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/awsAppsyncApiEndpoint": [
           {
             "type": "aws:cdk:logicalId",
             "data": "awsAppsyncApiEndpoint"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/awsAppsyncAuthenticationType": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/awsAppsyncAuthenticationType": [
           {
             "type": "aws:cdk:logicalId",
             "data": "awsAppsyncAuthenticationType"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/awsAppsyncRegion": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/awsAppsyncRegion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "awsAppsyncRegion"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/amplifyApiModelSchemaS3Uri": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/amplifyApiModelSchemaS3Uri": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyApiModelSchemaS3Uri"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/awsAppsyncAdditionalAuthenticationTypes": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/awsAppsyncAdditionalAuthenticationTypes": [
           {
             "type": "aws:cdk:logicalId",
             "data": "awsAppsyncAdditionalAuthenticationTypes"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/CDKMetadata/Default": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/CDKMetadata/Condition": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/BootstrapVersion": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/BootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "BootstrapVersion"
           }
         ],
-        "/amplify-amplifybefaq-user-sandbox-15145546bf/CheckBootstrapVersion": [
+        "/amplify-amplifybefaq-admin-sandbox-4fc1add85e/CheckBootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CheckBootstrapVersion"
           }
         ]
       },
-      "displayName": "amplify-amplifybefaq-user-sandbox-15145546bf"
+      "displayName": "amplify-amplifybefaq-admin-sandbox-4fc1add85e"
     },
     "Tree": {
       "type": "cdk:tree",
@@ -1207,5 +1199,5 @@
       }
     }
   },
-  "minimumCliVersion": "2.1018.1"
+  "minimumCliVersion": "2.1005.0"
 }

@@ -12,9 +12,7 @@ export const getTodo = /* GraphQL */ `query GetTodo($id: ID!) {
   getTodo(id: $id) {
     content
     createdAt
-    done
     id
-    owner
     updatedAt
     __typename
   }
@@ -29,9 +27,7 @@ export const listTodos = /* GraphQL */ `query ListTodos(
     items {
       content
       createdAt
-      done
       id
-      owner
       updatedAt
       __typename
     }

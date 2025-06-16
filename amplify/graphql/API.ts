@@ -6,9 +6,7 @@ export type Todo = {
   __typename: "Todo",
   content?: string | null,
   createdAt: string,
-  done?: boolean | null,
   id: string,
-  owner?: string | null,
   updatedAt: string,
 };
 
@@ -16,11 +14,9 @@ export type ModelTodoFilterInput = {
   and?: Array< ModelTodoFilterInput | null > | null,
   content?: ModelStringInput | null,
   createdAt?: ModelStringInput | null,
-  done?: ModelBooleanInput | null,
   id?: ModelIDInput | null,
   not?: ModelTodoFilterInput | null,
   or?: Array< ModelTodoFilterInput | null > | null,
-  owner?: ModelStringInput | null,
   updatedAt?: ModelStringInput | null,
 };
 
@@ -64,13 +60,6 @@ export type ModelSizeInput = {
   ne?: number | null,
 };
 
-export type ModelBooleanInput = {
-  attributeExists?: boolean | null,
-  attributeType?: ModelAttributeTypes | null,
-  eq?: boolean | null,
-  ne?: boolean | null,
-};
-
 export type ModelIDInput = {
   attributeExists?: boolean | null,
   attributeType?: ModelAttributeTypes | null,
@@ -97,16 +86,13 @@ export type ModelTodoConditionInput = {
   and?: Array< ModelTodoConditionInput | null > | null,
   content?: ModelStringInput | null,
   createdAt?: ModelStringInput | null,
-  done?: ModelBooleanInput | null,
   not?: ModelTodoConditionInput | null,
   or?: Array< ModelTodoConditionInput | null > | null,
-  owner?: ModelStringInput | null,
   updatedAt?: ModelStringInput | null,
 };
 
 export type CreateTodoInput = {
   content?: string | null,
-  done?: boolean | null,
   id?: string | null,
 };
 
@@ -116,7 +102,6 @@ export type DeleteTodoInput = {
 
 export type UpdateTodoInput = {
   content?: string | null,
-  done?: boolean | null,
   id: string,
 };
 
@@ -124,10 +109,8 @@ export type ModelSubscriptionTodoFilterInput = {
   and?: Array< ModelSubscriptionTodoFilterInput | null > | null,
   content?: ModelSubscriptionStringInput | null,
   createdAt?: ModelSubscriptionStringInput | null,
-  done?: ModelSubscriptionBooleanInput | null,
   id?: ModelSubscriptionIDInput | null,
   or?: Array< ModelSubscriptionTodoFilterInput | null > | null,
-  owner?: ModelStringInput | null,
   updatedAt?: ModelSubscriptionStringInput | null,
 };
 
@@ -144,11 +127,6 @@ export type ModelSubscriptionStringInput = {
   ne?: string | null,
   notContains?: string | null,
   notIn?: Array< string | null > | null,
-};
-
-export type ModelSubscriptionBooleanInput = {
-  eq?: boolean | null,
-  ne?: boolean | null,
 };
 
 export type ModelSubscriptionIDInput = {
@@ -175,9 +153,7 @@ export type GetTodoQuery = {
     __typename: "Todo",
     content?: string | null,
     createdAt: string,
-    done?: boolean | null,
     id: string,
-    owner?: string | null,
     updatedAt: string,
   } | null,
 };
@@ -195,9 +171,7 @@ export type ListTodosQuery = {
       __typename: "Todo",
       content?: string | null,
       createdAt: string,
-      done?: boolean | null,
       id: string,
-      owner?: string | null,
       updatedAt: string,
     } | null >,
     nextToken?: string | null,
@@ -214,9 +188,7 @@ export type CreateTodoMutation = {
     __typename: "Todo",
     content?: string | null,
     createdAt: string,
-    done?: boolean | null,
     id: string,
-    owner?: string | null,
     updatedAt: string,
   } | null,
 };
@@ -231,9 +203,7 @@ export type DeleteTodoMutation = {
     __typename: "Todo",
     content?: string | null,
     createdAt: string,
-    done?: boolean | null,
     id: string,
-    owner?: string | null,
     updatedAt: string,
   } | null,
 };
@@ -248,16 +218,13 @@ export type UpdateTodoMutation = {
     __typename: "Todo",
     content?: string | null,
     createdAt: string,
-    done?: boolean | null,
     id: string,
-    owner?: string | null,
     updatedAt: string,
   } | null,
 };
 
 export type OnCreateTodoSubscriptionVariables = {
   filter?: ModelSubscriptionTodoFilterInput | null,
-  owner?: string | null,
 };
 
 export type OnCreateTodoSubscription = {
@@ -265,16 +232,13 @@ export type OnCreateTodoSubscription = {
     __typename: "Todo",
     content?: string | null,
     createdAt: string,
-    done?: boolean | null,
     id: string,
-    owner?: string | null,
     updatedAt: string,
   } | null,
 };
 
 export type OnDeleteTodoSubscriptionVariables = {
   filter?: ModelSubscriptionTodoFilterInput | null,
-  owner?: string | null,
 };
 
 export type OnDeleteTodoSubscription = {
@@ -282,16 +246,13 @@ export type OnDeleteTodoSubscription = {
     __typename: "Todo",
     content?: string | null,
     createdAt: string,
-    done?: boolean | null,
     id: string,
-    owner?: string | null,
     updatedAt: string,
   } | null,
 };
 
 export type OnUpdateTodoSubscriptionVariables = {
   filter?: ModelSubscriptionTodoFilterInput | null,
-  owner?: string | null,
 };
 
 export type OnUpdateTodoSubscription = {
@@ -299,9 +260,7 @@ export type OnUpdateTodoSubscription = {
     __typename: "Todo",
     content?: string | null,
     createdAt: string,
-    done?: boolean | null,
     id: string,
-    owner?: string | null,
     updatedAt: string,
   } | null,
 };
