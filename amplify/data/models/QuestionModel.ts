@@ -2,12 +2,13 @@ import { a } from '@aws-amplify/backend';
 
 export const QuestionModel = a
   .model({
-    questionid: a.id().required(),
+    questionId: a.id().required(),
     question: a.string().required(),
-    askedBy: a.belongsTo("userId",'UserModel'),
-    tags: a.string().array(), 
-    answers: a.hasMany( "answerid" ,'AnswerModel' ), 
-    
+    userId: a.id().required(),
+    formId: a.id().required(),
+    askedby: a.belongsTo('userModel','userId'), 
+    answers: a.hasMany('answerModel','questionId'),
+    form: a.belongsTo('formModel', 'formId'),
     createdAt: a.datetime(),
     updatedAt: a.datetime(),
-  }).identifier(["questionid"]);
+  }).identifier(["questionId"]);
