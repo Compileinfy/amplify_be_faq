@@ -1,15 +1,18 @@
 import { type ClientSchema, a, defineData } from '@aws-amplify/backend';
 
-import { UserModel } from './model/UserModel';
-import { QuestionModel } from './model/QuestionModel';
-import { AnswerModel } from './model/AnswerModel';
+import { UserModel } from './models/UserModel';
+import { QuestionModel } from './models/QuestionModel';
+import { AnswerModel } from './models/AnswerModel';
+import { FormModel } from './models/FormModel';
 
 
 const schema = a.schema({
-  UserModel,
-  QuestionModel,
-  AnswerModel,
+  userModel: UserModel,
+  questionModel: QuestionModel,
+  answerModel: AnswerModel,
+  formModel: FormModel,
 }).authorization((allow) => [
+  allow.owner().to(['create', 'read', 'update']),
   allow.authenticated(),
 ]);
 
@@ -21,4 +24,3 @@ export const data = defineData({
     defaultAuthorizationMode: 'userPool',
   },
 });
-

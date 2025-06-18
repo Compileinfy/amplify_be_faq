@@ -9,4 +9,7 @@ export const UserModel = a
     email: a.email().required(),
     createdAt: a.datetime(),
     updatedAt: a.datetime(),
+    questions: a.hasMany('questionModel', 'userId'),
+    answers: a.hasMany('answerModel', 'userId'),
+    forms: a.hasMany('formModel', 'userId'),
   }).identifier(["userId"]);
