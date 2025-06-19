@@ -45,8 +45,15 @@
               "isRequired": true,
               "attributes": []
             },
-            "username": {
-              "name": "username",
+            "firstname": {
+              "name": "firstname",
+              "isArray": false,
+              "type": "String",
+              "isRequired": true,
+              "attributes": []
+            },
+            "lastname": {
+              "name": "lastname",
               "isArray": false,
               "type": "String",
               "isRequired": true,
@@ -156,17 +163,6 @@
               "properties": {
                 "rules": [
                   {
-                    "provider": "userPools",
-                    "ownerField": "owner",
-                    "allow": "owner",
-                    "operations": [
-                      "create",
-                      "read",
-                      "update"
-                    ],
-                    "identityClaim": "cognito:username"
-                  },
-                  {
                     "allow": "private",
                     "operations": [
                       "create",
@@ -201,6 +197,14 @@
               "type": "String",
               "isRequired": true,
               "attributes": []
+            },
+            "options": {
+              "name": "options",
+              "isArray": true,
+              "type": "String",
+              "isRequired": false,
+              "attributes": [],
+              "isArrayNullable": false
             },
             "userId": {
               "name": "userId",
@@ -297,17 +301,6 @@
               "properties": {
                 "rules": [
                   {
-                    "provider": "userPools",
-                    "ownerField": "owner",
-                    "allow": "owner",
-                    "operations": [
-                      "create",
-                      "read",
-                      "update"
-                    ],
-                    "identityClaim": "cognito:username"
-                  },
-                  {
                     "allow": "private",
                     "operations": [
                       "create",
@@ -342,6 +335,14 @@
               "type": "String",
               "isRequired": true,
               "attributes": []
+            },
+            "selectedOptions": {
+              "name": "selectedOptions",
+              "isArray": true,
+              "type": "String",
+              "isRequired": false,
+              "attributes": [],
+              "isArrayNullable": false
             },
             "questionId": {
               "name": "questionId",
@@ -421,17 +422,6 @@
               "type": "auth",
               "properties": {
                 "rules": [
-                  {
-                    "provider": "userPools",
-                    "ownerField": "owner",
-                    "allow": "owner",
-                    "operations": [
-                      "create",
-                      "read",
-                      "update"
-                    ],
-                    "identityClaim": "cognito:username"
-                  },
                   {
                     "allow": "private",
                     "operations": [
@@ -540,17 +530,6 @@
               "type": "auth",
               "properties": {
                 "rules": [
-                  {
-                    "provider": "userPools",
-                    "ownerField": "owner",
-                    "allow": "owner",
-                    "operations": [
-                      "create",
-                      "read",
-                      "update"
-                    ],
-                    "identityClaim": "cognito:username"
-                  },
                   {
                     "allow": "private",
                     "operations": [

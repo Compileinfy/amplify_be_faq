@@ -15,27 +15,27 @@ export const getAnswerModel = /* GraphQL */ `query GetAnswerModel($answerId: ID!
     answeredby {
       createdAt
       email
+      firstname
       isAdmin
       isModerator
-      owner
+      lastname
       updatedAt
       userId
-      username
       __typename
     }
     createdAt
-    owner
     questionId
     questions {
       createdAt
       formId
-      owner
+      options
       question
       questionId
       updatedAt
       userId
       __typename
     }
+    selectedOptions
     updatedAt
     userId
     __typename
@@ -51,12 +51,12 @@ export const getFormModel = /* GraphQL */ `query GetFormModel($formId: ID!) {
     createdBy {
       createdAt
       email
+      firstname
       isAdmin
       isModerator
-      owner
+      lastname
       updatedAt
       userId
-      username
       __typename
     }
     formId
@@ -64,7 +64,6 @@ export const getFormModel = /* GraphQL */ `query GetFormModel($formId: ID!) {
       nextToken
       __typename
     }
-    owner
     title
     updatedAt
     userId
@@ -84,26 +83,25 @@ export const getQuestionModel = /* GraphQL */ `query GetQuestionModel($questionI
     askedby {
       createdAt
       email
+      firstname
       isAdmin
       isModerator
-      owner
+      lastname
       updatedAt
       userId
-      username
       __typename
     }
     createdAt
     form {
       createdAt
       formId
-      owner
       title
       updatedAt
       userId
       __typename
     }
     formId
-    owner
+    options
     question
     questionId
     updatedAt
@@ -123,20 +121,20 @@ export const getUserModel = /* GraphQL */ `query GetUserModel($userId: ID!) {
     }
     createdAt
     email
+    firstname
     forms {
       nextToken
       __typename
     }
     isAdmin
     isModerator
-    owner
+    lastname
     questions {
       nextToken
       __typename
     }
     updatedAt
     userId
-    username
     __typename
   }
 }
@@ -162,8 +160,8 @@ export const listAnswerModels = /* GraphQL */ `query ListAnswerModels(
       answer
       answerId
       createdAt
-      owner
       questionId
+      selectedOptions
       updatedAt
       userId
       __typename
@@ -193,7 +191,6 @@ export const listFormModels = /* GraphQL */ `query ListFormModels(
     items {
       createdAt
       formId
-      owner
       title
       updatedAt
       userId
@@ -224,7 +221,7 @@ export const listQuestionModels = /* GraphQL */ `query ListQuestionModels(
     items {
       createdAt
       formId
-      owner
+      options
       question
       questionId
       updatedAt
@@ -256,12 +253,12 @@ export const listUserModels = /* GraphQL */ `query ListUserModels(
     items {
       createdAt
       email
+      firstname
       isAdmin
       isModerator
-      owner
+      lastname
       updatedAt
       userId
-      username
       __typename
     }
     nextToken

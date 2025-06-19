@@ -10,35 +10,34 @@ type GeneratedSubscription<InputType, OutputType> = string & {
 
 export const onCreateAnswerModel = /* GraphQL */ `subscription OnCreateAnswerModel(
   $filter: ModelSubscriptionAnswerModelFilterInput
-  $owner: String
 ) {
-  onCreateAnswerModel(filter: $filter, owner: $owner) {
+  onCreateAnswerModel(filter: $filter) {
     answer
     answerId
     answeredby {
       createdAt
       email
+      firstname
       isAdmin
       isModerator
-      owner
+      lastname
       updatedAt
       userId
-      username
       __typename
     }
     createdAt
-    owner
     questionId
     questions {
       createdAt
       formId
-      owner
+      options
       question
       questionId
       updatedAt
       userId
       __typename
     }
+    selectedOptions
     updatedAt
     userId
     __typename
@@ -48,21 +47,18 @@ export const onCreateAnswerModel = /* GraphQL */ `subscription OnCreateAnswerMod
   APITypes.OnCreateAnswerModelSubscriptionVariables,
   APITypes.OnCreateAnswerModelSubscription
 >;
-export const onCreateFormModel = /* GraphQL */ `subscription OnCreateFormModel(
-  $filter: ModelSubscriptionFormModelFilterInput
-  $owner: String
-) {
-  onCreateFormModel(filter: $filter, owner: $owner) {
+export const onCreateFormModel = /* GraphQL */ `subscription OnCreateFormModel($filter: ModelSubscriptionFormModelFilterInput) {
+  onCreateFormModel(filter: $filter) {
     createdAt
     createdBy {
       createdAt
       email
+      firstname
       isAdmin
       isModerator
-      owner
+      lastname
       updatedAt
       userId
-      username
       __typename
     }
     formId
@@ -70,7 +66,6 @@ export const onCreateFormModel = /* GraphQL */ `subscription OnCreateFormModel(
       nextToken
       __typename
     }
-    owner
     title
     updatedAt
     userId
@@ -83,9 +78,8 @@ export const onCreateFormModel = /* GraphQL */ `subscription OnCreateFormModel(
 >;
 export const onCreateQuestionModel = /* GraphQL */ `subscription OnCreateQuestionModel(
   $filter: ModelSubscriptionQuestionModelFilterInput
-  $owner: String
 ) {
-  onCreateQuestionModel(filter: $filter, owner: $owner) {
+  onCreateQuestionModel(filter: $filter) {
     answers {
       nextToken
       __typename
@@ -93,26 +87,25 @@ export const onCreateQuestionModel = /* GraphQL */ `subscription OnCreateQuestio
     askedby {
       createdAt
       email
+      firstname
       isAdmin
       isModerator
-      owner
+      lastname
       updatedAt
       userId
-      username
       __typename
     }
     createdAt
     form {
       createdAt
       formId
-      owner
       title
       updatedAt
       userId
       __typename
     }
     formId
-    owner
+    options
     question
     questionId
     updatedAt
@@ -124,31 +117,28 @@ export const onCreateQuestionModel = /* GraphQL */ `subscription OnCreateQuestio
   APITypes.OnCreateQuestionModelSubscriptionVariables,
   APITypes.OnCreateQuestionModelSubscription
 >;
-export const onCreateUserModel = /* GraphQL */ `subscription OnCreateUserModel(
-  $filter: ModelSubscriptionUserModelFilterInput
-  $owner: String
-) {
-  onCreateUserModel(filter: $filter, owner: $owner) {
+export const onCreateUserModel = /* GraphQL */ `subscription OnCreateUserModel($filter: ModelSubscriptionUserModelFilterInput) {
+  onCreateUserModel(filter: $filter) {
     answers {
       nextToken
       __typename
     }
     createdAt
     email
+    firstname
     forms {
       nextToken
       __typename
     }
     isAdmin
     isModerator
-    owner
+    lastname
     questions {
       nextToken
       __typename
     }
     updatedAt
     userId
-    username
     __typename
   }
 }
@@ -158,35 +148,34 @@ export const onCreateUserModel = /* GraphQL */ `subscription OnCreateUserModel(
 >;
 export const onDeleteAnswerModel = /* GraphQL */ `subscription OnDeleteAnswerModel(
   $filter: ModelSubscriptionAnswerModelFilterInput
-  $owner: String
 ) {
-  onDeleteAnswerModel(filter: $filter, owner: $owner) {
+  onDeleteAnswerModel(filter: $filter) {
     answer
     answerId
     answeredby {
       createdAt
       email
+      firstname
       isAdmin
       isModerator
-      owner
+      lastname
       updatedAt
       userId
-      username
       __typename
     }
     createdAt
-    owner
     questionId
     questions {
       createdAt
       formId
-      owner
+      options
       question
       questionId
       updatedAt
       userId
       __typename
     }
+    selectedOptions
     updatedAt
     userId
     __typename
@@ -196,21 +185,18 @@ export const onDeleteAnswerModel = /* GraphQL */ `subscription OnDeleteAnswerMod
   APITypes.OnDeleteAnswerModelSubscriptionVariables,
   APITypes.OnDeleteAnswerModelSubscription
 >;
-export const onDeleteFormModel = /* GraphQL */ `subscription OnDeleteFormModel(
-  $filter: ModelSubscriptionFormModelFilterInput
-  $owner: String
-) {
-  onDeleteFormModel(filter: $filter, owner: $owner) {
+export const onDeleteFormModel = /* GraphQL */ `subscription OnDeleteFormModel($filter: ModelSubscriptionFormModelFilterInput) {
+  onDeleteFormModel(filter: $filter) {
     createdAt
     createdBy {
       createdAt
       email
+      firstname
       isAdmin
       isModerator
-      owner
+      lastname
       updatedAt
       userId
-      username
       __typename
     }
     formId
@@ -218,7 +204,6 @@ export const onDeleteFormModel = /* GraphQL */ `subscription OnDeleteFormModel(
       nextToken
       __typename
     }
-    owner
     title
     updatedAt
     userId
@@ -231,9 +216,8 @@ export const onDeleteFormModel = /* GraphQL */ `subscription OnDeleteFormModel(
 >;
 export const onDeleteQuestionModel = /* GraphQL */ `subscription OnDeleteQuestionModel(
   $filter: ModelSubscriptionQuestionModelFilterInput
-  $owner: String
 ) {
-  onDeleteQuestionModel(filter: $filter, owner: $owner) {
+  onDeleteQuestionModel(filter: $filter) {
     answers {
       nextToken
       __typename
@@ -241,26 +225,25 @@ export const onDeleteQuestionModel = /* GraphQL */ `subscription OnDeleteQuestio
     askedby {
       createdAt
       email
+      firstname
       isAdmin
       isModerator
-      owner
+      lastname
       updatedAt
       userId
-      username
       __typename
     }
     createdAt
     form {
       createdAt
       formId
-      owner
       title
       updatedAt
       userId
       __typename
     }
     formId
-    owner
+    options
     question
     questionId
     updatedAt
@@ -272,31 +255,28 @@ export const onDeleteQuestionModel = /* GraphQL */ `subscription OnDeleteQuestio
   APITypes.OnDeleteQuestionModelSubscriptionVariables,
   APITypes.OnDeleteQuestionModelSubscription
 >;
-export const onDeleteUserModel = /* GraphQL */ `subscription OnDeleteUserModel(
-  $filter: ModelSubscriptionUserModelFilterInput
-  $owner: String
-) {
-  onDeleteUserModel(filter: $filter, owner: $owner) {
+export const onDeleteUserModel = /* GraphQL */ `subscription OnDeleteUserModel($filter: ModelSubscriptionUserModelFilterInput) {
+  onDeleteUserModel(filter: $filter) {
     answers {
       nextToken
       __typename
     }
     createdAt
     email
+    firstname
     forms {
       nextToken
       __typename
     }
     isAdmin
     isModerator
-    owner
+    lastname
     questions {
       nextToken
       __typename
     }
     updatedAt
     userId
-    username
     __typename
   }
 }
@@ -306,35 +286,34 @@ export const onDeleteUserModel = /* GraphQL */ `subscription OnDeleteUserModel(
 >;
 export const onUpdateAnswerModel = /* GraphQL */ `subscription OnUpdateAnswerModel(
   $filter: ModelSubscriptionAnswerModelFilterInput
-  $owner: String
 ) {
-  onUpdateAnswerModel(filter: $filter, owner: $owner) {
+  onUpdateAnswerModel(filter: $filter) {
     answer
     answerId
     answeredby {
       createdAt
       email
+      firstname
       isAdmin
       isModerator
-      owner
+      lastname
       updatedAt
       userId
-      username
       __typename
     }
     createdAt
-    owner
     questionId
     questions {
       createdAt
       formId
-      owner
+      options
       question
       questionId
       updatedAt
       userId
       __typename
     }
+    selectedOptions
     updatedAt
     userId
     __typename
@@ -344,21 +323,18 @@ export const onUpdateAnswerModel = /* GraphQL */ `subscription OnUpdateAnswerMod
   APITypes.OnUpdateAnswerModelSubscriptionVariables,
   APITypes.OnUpdateAnswerModelSubscription
 >;
-export const onUpdateFormModel = /* GraphQL */ `subscription OnUpdateFormModel(
-  $filter: ModelSubscriptionFormModelFilterInput
-  $owner: String
-) {
-  onUpdateFormModel(filter: $filter, owner: $owner) {
+export const onUpdateFormModel = /* GraphQL */ `subscription OnUpdateFormModel($filter: ModelSubscriptionFormModelFilterInput) {
+  onUpdateFormModel(filter: $filter) {
     createdAt
     createdBy {
       createdAt
       email
+      firstname
       isAdmin
       isModerator
-      owner
+      lastname
       updatedAt
       userId
-      username
       __typename
     }
     formId
@@ -366,7 +342,6 @@ export const onUpdateFormModel = /* GraphQL */ `subscription OnUpdateFormModel(
       nextToken
       __typename
     }
-    owner
     title
     updatedAt
     userId
@@ -379,9 +354,8 @@ export const onUpdateFormModel = /* GraphQL */ `subscription OnUpdateFormModel(
 >;
 export const onUpdateQuestionModel = /* GraphQL */ `subscription OnUpdateQuestionModel(
   $filter: ModelSubscriptionQuestionModelFilterInput
-  $owner: String
 ) {
-  onUpdateQuestionModel(filter: $filter, owner: $owner) {
+  onUpdateQuestionModel(filter: $filter) {
     answers {
       nextToken
       __typename
@@ -389,26 +363,25 @@ export const onUpdateQuestionModel = /* GraphQL */ `subscription OnUpdateQuestio
     askedby {
       createdAt
       email
+      firstname
       isAdmin
       isModerator
-      owner
+      lastname
       updatedAt
       userId
-      username
       __typename
     }
     createdAt
     form {
       createdAt
       formId
-      owner
       title
       updatedAt
       userId
       __typename
     }
     formId
-    owner
+    options
     question
     questionId
     updatedAt
@@ -420,31 +393,28 @@ export const onUpdateQuestionModel = /* GraphQL */ `subscription OnUpdateQuestio
   APITypes.OnUpdateQuestionModelSubscriptionVariables,
   APITypes.OnUpdateQuestionModelSubscription
 >;
-export const onUpdateUserModel = /* GraphQL */ `subscription OnUpdateUserModel(
-  $filter: ModelSubscriptionUserModelFilterInput
-  $owner: String
-) {
-  onUpdateUserModel(filter: $filter, owner: $owner) {
+export const onUpdateUserModel = /* GraphQL */ `subscription OnUpdateUserModel($filter: ModelSubscriptionUserModelFilterInput) {
+  onUpdateUserModel(filter: $filter) {
     answers {
       nextToken
       __typename
     }
     createdAt
     email
+    firstname
     forms {
       nextToken
       __typename
     }
     isAdmin
     isModerator
-    owner
+    lastname
     questions {
       nextToken
       __typename
     }
     updatedAt
     userId
-    username
     __typename
   }
 }
