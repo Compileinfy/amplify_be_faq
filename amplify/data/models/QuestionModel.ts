@@ -4,6 +4,7 @@ export const QuestionModel = a
   .model({
     questionId: a.id().required(),
     question: a.string().required(),
+    options : a.string().array().required(),
     userId: a.id().required(),
     formId: a.id().required(),
     askedby: a.belongsTo('userModel','userId'), 
