@@ -3,7 +3,8 @@ import { a } from '@aws-amplify/backend';
 export const UserModel = a
   .model({
     userId: a.id().required(),
-    username: a.string().required(),
+    firstname: a.string().required(),
+    lastname: a.string().required(),
     isAdmin: a.boolean().default(false),
     isModerator: a.boolean().default(false),
     email: a.email().required(),

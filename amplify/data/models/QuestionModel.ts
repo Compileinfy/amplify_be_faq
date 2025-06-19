@@ -6,6 +6,7 @@ export const QuestionModel = a
     question: a.string().required(),
     userId: a.id().required(),
     formId: a.id().required(),
+    options: a.string().array().required(),
     askedby: a.belongsTo('userModel','userId'), 
     answers: a.hasMany('answerModel','questionId'),
     form: a.belongsTo('formModel', 'formId'),

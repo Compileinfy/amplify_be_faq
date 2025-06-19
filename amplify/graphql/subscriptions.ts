@@ -17,6 +17,7 @@ export const onCreateAnswerModel = /* GraphQL */ `subscription OnCreateAnswerMod
     answerId
     answeredby {
       createdAt
+      email
       isAdmin
       isModerator
       owner
@@ -31,6 +32,7 @@ export const onCreateAnswerModel = /* GraphQL */ `subscription OnCreateAnswerMod
     questions {
       createdAt
       formId
+      options
       owner
       question
       questionId
@@ -38,6 +40,7 @@ export const onCreateAnswerModel = /* GraphQL */ `subscription OnCreateAnswerMod
       userId
       __typename
     }
+    selectedOptions
     updatedAt
     userId
     __typename
@@ -55,6 +58,7 @@ export const onCreateFormModel = /* GraphQL */ `subscription OnCreateFormModel(
     createdAt
     createdBy {
       createdAt
+      email
       isAdmin
       isModerator
       owner
@@ -88,8 +92,9 @@ export const onCreateQuestionModel = /* GraphQL */ `subscription OnCreateQuestio
       nextToken
       __typename
     }
-    askedBy {
+    askedby {
       createdAt
+      email
       isAdmin
       isModerator
       owner
@@ -109,6 +114,7 @@ export const onCreateQuestionModel = /* GraphQL */ `subscription OnCreateQuestio
       __typename
     }
     formId
+    options
     owner
     question
     questionId
@@ -131,6 +137,7 @@ export const onCreateUserModel = /* GraphQL */ `subscription OnCreateUserModel(
       __typename
     }
     createdAt
+    email
     forms {
       nextToken
       __typename
@@ -161,6 +168,7 @@ export const onDeleteAnswerModel = /* GraphQL */ `subscription OnDeleteAnswerMod
     answerId
     answeredby {
       createdAt
+      email
       isAdmin
       isModerator
       owner
@@ -175,6 +183,7 @@ export const onDeleteAnswerModel = /* GraphQL */ `subscription OnDeleteAnswerMod
     questions {
       createdAt
       formId
+      options
       owner
       question
       questionId
@@ -182,6 +191,7 @@ export const onDeleteAnswerModel = /* GraphQL */ `subscription OnDeleteAnswerMod
       userId
       __typename
     }
+    selectedOptions
     updatedAt
     userId
     __typename
@@ -199,6 +209,7 @@ export const onDeleteFormModel = /* GraphQL */ `subscription OnDeleteFormModel(
     createdAt
     createdBy {
       createdAt
+      email
       isAdmin
       isModerator
       owner
@@ -232,8 +243,9 @@ export const onDeleteQuestionModel = /* GraphQL */ `subscription OnDeleteQuestio
       nextToken
       __typename
     }
-    askedBy {
+    askedby {
       createdAt
+      email
       isAdmin
       isModerator
       owner
@@ -253,6 +265,7 @@ export const onDeleteQuestionModel = /* GraphQL */ `subscription OnDeleteQuestio
       __typename
     }
     formId
+    options
     owner
     question
     questionId
@@ -275,6 +288,7 @@ export const onDeleteUserModel = /* GraphQL */ `subscription OnDeleteUserModel(
       __typename
     }
     createdAt
+    email
     forms {
       nextToken
       __typename
@@ -305,6 +319,7 @@ export const onUpdateAnswerModel = /* GraphQL */ `subscription OnUpdateAnswerMod
     answerId
     answeredby {
       createdAt
+      email
       isAdmin
       isModerator
       owner
@@ -319,6 +334,7 @@ export const onUpdateAnswerModel = /* GraphQL */ `subscription OnUpdateAnswerMod
     questions {
       createdAt
       formId
+      options
       owner
       question
       questionId
@@ -326,6 +342,7 @@ export const onUpdateAnswerModel = /* GraphQL */ `subscription OnUpdateAnswerMod
       userId
       __typename
     }
+    selectedOptions
     updatedAt
     userId
     __typename
@@ -343,6 +360,7 @@ export const onUpdateFormModel = /* GraphQL */ `subscription OnUpdateFormModel(
     createdAt
     createdBy {
       createdAt
+      email
       isAdmin
       isModerator
       owner
@@ -376,8 +394,9 @@ export const onUpdateQuestionModel = /* GraphQL */ `subscription OnUpdateQuestio
       nextToken
       __typename
     }
-    askedBy {
+    askedby {
       createdAt
+      email
       isAdmin
       isModerator
       owner
@@ -397,6 +416,7 @@ export const onUpdateQuestionModel = /* GraphQL */ `subscription OnUpdateQuestio
       __typename
     }
     formId
+    options
     owner
     question
     questionId
@@ -419,6 +439,7 @@ export const onUpdateUserModel = /* GraphQL */ `subscription OnUpdateUserModel(
       __typename
     }
     createdAt
+    email
     forms {
       nextToken
       __typename

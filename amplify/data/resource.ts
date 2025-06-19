@@ -5,15 +5,18 @@ import { QuestionModel } from './models/QuestionModel';
 import { AnswerModel } from './models/AnswerModel';
 import { FormModel } from './models/FormModel';
 
+
 const schema = a.schema({
   userModel:UserModel,
   questionModel:QuestionModel,
   answerModel:AnswerModel,
-  formModel:FormModel
+
+  formModel:FormModel,
+
 }).authorization((allow) => [
   allow.owner().to(['create', 'read', 'update']),
-  allow.authenticated().to(['read']),
-  allow.groups(['admin', 'moderator']).to(['read', 'update', 'delete']),
+  allow.authenticated(),
+  
 ]);
 
 export type Schema = ClientSchema<typeof schema>;

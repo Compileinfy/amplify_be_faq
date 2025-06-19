@@ -6,7 +6,9 @@ export const AnswerModel = a
     answer: a.string().required(),
     questionId: a.id().required(),
     userId: a.id().required(),
+    selectedOptions: a.string().array().required(),
     questions: a.belongsTo('questionModel','questionId'),
+
     answeredby: a.belongsTo('userModel','userId'),
     createdAt: a.datetime(),
     updatedAt: a.datetime(),

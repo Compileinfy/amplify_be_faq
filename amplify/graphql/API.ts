@@ -11,6 +11,7 @@ export type answerModel = {
   owner?: string | null,
   questionId: string,
   questions?: questionModel | null,
+  selectedOptions: Array< string | null >,
   updatedAt?: string | null,
   userId: string,
 };
@@ -19,6 +20,7 @@ export type userModel = {
   __typename: "userModel",
   answers?: ModelanswerModelConnection | null,
   createdAt?: string | null,
+  email: string,
   forms?: ModelformModelConnection | null,
   isAdmin?: boolean | null,
   isModerator?: boolean | null,
@@ -62,10 +64,11 @@ export type ModelquestionModelConnection = {
 export type questionModel = {
   __typename: "questionModel",
   answers?: ModelanswerModelConnection | null,
-  askedBy?: userModel | null,
+  askedby?: userModel | null,
   createdAt?: string | null,
   form?: formModel | null,
-  formId?: string | null,
+  formId: string,
+  options: Array< string | null >,
   owner?: string | null,
   question: string,
   questionId: string,
@@ -83,6 +86,7 @@ export type ModelAnswerModelFilterInput = {
   or?: Array< ModelAnswerModelFilterInput | null > | null,
   owner?: ModelStringInput | null,
   questionId?: ModelIDInput | null,
+  selectedOptions?: ModelStringInput | null,
   updatedAt?: ModelStringInput | null,
   userId?: ModelIDInput | null,
 };
@@ -180,6 +184,7 @@ export type ModelQuestionModelFilterInput = {
   formId?: ModelIDInput | null,
   id?: ModelIDInput | null,
   not?: ModelQuestionModelFilterInput | null,
+  options?: ModelStringInput | null,
   or?: Array< ModelQuestionModelFilterInput | null > | null,
   owner?: ModelStringInput | null,
   question?: ModelStringInput | null,
@@ -197,6 +202,7 @@ export type ModelQuestionModelConnection = {
 export type ModelUserModelFilterInput = {
   and?: Array< ModelUserModelFilterInput | null > | null,
   createdAt?: ModelStringInput | null,
+  email?: ModelStringInput | null,
   id?: ModelIDInput | null,
   isAdmin?: ModelBooleanInput | null,
   isModerator?: ModelBooleanInput | null,
@@ -230,6 +236,7 @@ export type ModelAnswerModelConditionInput = {
   or?: Array< ModelAnswerModelConditionInput | null > | null,
   owner?: ModelStringInput | null,
   questionId?: ModelIDInput | null,
+  selectedOptions?: ModelStringInput | null,
   updatedAt?: ModelStringInput | null,
   userId?: ModelIDInput | null,
 };
@@ -239,6 +246,7 @@ export type CreateAnswerModelInput = {
   answerId: string,
   createdAt?: string | null,
   questionId: string,
+  selectedOptions: Array< string | null >,
   updatedAt?: string | null,
   userId: string,
 };
@@ -268,6 +276,7 @@ export type ModelQuestionModelConditionInput = {
   createdAt?: ModelStringInput | null,
   formId?: ModelIDInput | null,
   not?: ModelQuestionModelConditionInput | null,
+  options?: ModelStringInput | null,
   or?: Array< ModelQuestionModelConditionInput | null > | null,
   owner?: ModelStringInput | null,
   question?: ModelStringInput | null,
@@ -278,7 +287,8 @@ export type ModelQuestionModelConditionInput = {
 
 export type CreateQuestionModelInput = {
   createdAt?: string | null,
-  formId?: string | null,
+  formId: string,
+  options: Array< string | null >,
   question: string,
   questionId: string,
   updatedAt?: string | null,
@@ -288,6 +298,7 @@ export type CreateQuestionModelInput = {
 export type ModelUserModelConditionInput = {
   and?: Array< ModelUserModelConditionInput | null > | null,
   createdAt?: ModelStringInput | null,
+  email?: ModelStringInput | null,
   isAdmin?: ModelBooleanInput | null,
   isModerator?: ModelBooleanInput | null,
   not?: ModelUserModelConditionInput | null,
@@ -300,6 +311,7 @@ export type ModelUserModelConditionInput = {
 
 export type CreateUserModelInput = {
   createdAt?: string | null,
+  email: string,
   isAdmin?: boolean | null,
   isModerator?: boolean | null,
   updatedAt?: string | null,
@@ -328,6 +340,7 @@ export type UpdateAnswerModelInput = {
   answerId: string,
   createdAt?: string | null,
   questionId?: string | null,
+  selectedOptions?: Array< string | null > | null,
   updatedAt?: string | null,
   userId?: string | null,
 };
@@ -343,6 +356,7 @@ export type UpdateFormModelInput = {
 export type UpdateQuestionModelInput = {
   createdAt?: string | null,
   formId?: string | null,
+  options?: Array< string | null > | null,
   question?: string | null,
   questionId: string,
   updatedAt?: string | null,
@@ -351,6 +365,7 @@ export type UpdateQuestionModelInput = {
 
 export type UpdateUserModelInput = {
   createdAt?: string | null,
+  email?: string | null,
   isAdmin?: boolean | null,
   isModerator?: boolean | null,
   updatedAt?: string | null,
@@ -367,6 +382,7 @@ export type ModelSubscriptionAnswerModelFilterInput = {
   or?: Array< ModelSubscriptionAnswerModelFilterInput | null > | null,
   owner?: ModelStringInput | null,
   questionId?: ModelSubscriptionIDInput | null,
+  selectedOptions?: ModelSubscriptionStringInput | null,
   updatedAt?: ModelSubscriptionStringInput | null,
   userId?: ModelSubscriptionIDInput | null,
 };
@@ -418,6 +434,7 @@ export type ModelSubscriptionQuestionModelFilterInput = {
   createdAt?: ModelSubscriptionStringInput | null,
   formId?: ModelSubscriptionIDInput | null,
   id?: ModelSubscriptionIDInput | null,
+  options?: ModelSubscriptionStringInput | null,
   or?: Array< ModelSubscriptionQuestionModelFilterInput | null > | null,
   owner?: ModelStringInput | null,
   question?: ModelSubscriptionStringInput | null,
@@ -429,6 +446,7 @@ export type ModelSubscriptionQuestionModelFilterInput = {
 export type ModelSubscriptionUserModelFilterInput = {
   and?: Array< ModelSubscriptionUserModelFilterInput | null > | null,
   createdAt?: ModelSubscriptionStringInput | null,
+  email?: ModelSubscriptionStringInput | null,
   id?: ModelSubscriptionIDInput | null,
   isAdmin?: ModelSubscriptionBooleanInput | null,
   isModerator?: ModelSubscriptionBooleanInput | null,
@@ -456,6 +474,7 @@ export type GetAnswerModelQuery = {
     answeredby?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -469,13 +488,15 @@ export type GetAnswerModelQuery = {
     questions?:  {
       __typename: "questionModel",
       createdAt?: string | null,
-      formId?: string | null,
+      formId: string,
+      options: Array< string | null >,
       owner?: string | null,
       question: string,
       questionId: string,
       updatedAt?: string | null,
       userId: string,
     } | null,
+    selectedOptions: Array< string | null >,
     updatedAt?: string | null,
     userId: string,
   } | null,
@@ -492,6 +513,7 @@ export type GetFormModelQuery = {
     createdBy?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -522,9 +544,10 @@ export type GetQuestionModelQuery = {
       __typename: "ModelanswerModelConnection",
       nextToken?: string | null,
     } | null,
-    askedBy?:  {
+    askedby?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -542,7 +565,8 @@ export type GetQuestionModelQuery = {
       updatedAt?: string | null,
       userId: string,
     } | null,
-    formId?: string | null,
+    formId: string,
+    options: Array< string | null >,
     owner?: string | null,
     question: string,
     questionId: string,
@@ -563,6 +587,7 @@ export type GetUserModelQuery = {
       nextToken?: string | null,
     } | null,
     createdAt?: string | null,
+    email: string,
     forms?:  {
       __typename: "ModelformModelConnection",
       nextToken?: string | null,
@@ -598,6 +623,7 @@ export type ListAnswerModelsQuery = {
       createdAt?: string | null,
       owner?: string | null,
       questionId: string,
+      selectedOptions: Array< string | null >,
       updatedAt?: string | null,
       userId: string,
     } | null >,
@@ -643,7 +669,8 @@ export type ListQuestionModelsQuery = {
     items:  Array< {
       __typename: "questionModel",
       createdAt?: string | null,
-      formId?: string | null,
+      formId: string,
+      options: Array< string | null >,
       owner?: string | null,
       question: string,
       questionId: string,
@@ -668,6 +695,7 @@ export type ListUserModelsQuery = {
     items:  Array< {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -692,6 +720,7 @@ export type CreateAnswerModelMutation = {
     answeredby?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -705,13 +734,15 @@ export type CreateAnswerModelMutation = {
     questions?:  {
       __typename: "questionModel",
       createdAt?: string | null,
-      formId?: string | null,
+      formId: string,
+      options: Array< string | null >,
       owner?: string | null,
       question: string,
       questionId: string,
       updatedAt?: string | null,
       userId: string,
     } | null,
+    selectedOptions: Array< string | null >,
     updatedAt?: string | null,
     userId: string,
   } | null,
@@ -729,6 +760,7 @@ export type CreateFormModelMutation = {
     createdBy?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -760,9 +792,10 @@ export type CreateQuestionModelMutation = {
       __typename: "ModelanswerModelConnection",
       nextToken?: string | null,
     } | null,
-    askedBy?:  {
+    askedby?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -780,7 +813,8 @@ export type CreateQuestionModelMutation = {
       updatedAt?: string | null,
       userId: string,
     } | null,
-    formId?: string | null,
+    formId: string,
+    options: Array< string | null >,
     owner?: string | null,
     question: string,
     questionId: string,
@@ -802,6 +836,7 @@ export type CreateUserModelMutation = {
       nextToken?: string | null,
     } | null,
     createdAt?: string | null,
+    email: string,
     forms?:  {
       __typename: "ModelformModelConnection",
       nextToken?: string | null,
@@ -832,6 +867,7 @@ export type DeleteAnswerModelMutation = {
     answeredby?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -845,13 +881,15 @@ export type DeleteAnswerModelMutation = {
     questions?:  {
       __typename: "questionModel",
       createdAt?: string | null,
-      formId?: string | null,
+      formId: string,
+      options: Array< string | null >,
       owner?: string | null,
       question: string,
       questionId: string,
       updatedAt?: string | null,
       userId: string,
     } | null,
+    selectedOptions: Array< string | null >,
     updatedAt?: string | null,
     userId: string,
   } | null,
@@ -869,6 +907,7 @@ export type DeleteFormModelMutation = {
     createdBy?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -900,9 +939,10 @@ export type DeleteQuestionModelMutation = {
       __typename: "ModelanswerModelConnection",
       nextToken?: string | null,
     } | null,
-    askedBy?:  {
+    askedby?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -920,7 +960,8 @@ export type DeleteQuestionModelMutation = {
       updatedAt?: string | null,
       userId: string,
     } | null,
-    formId?: string | null,
+    formId: string,
+    options: Array< string | null >,
     owner?: string | null,
     question: string,
     questionId: string,
@@ -942,6 +983,7 @@ export type DeleteUserModelMutation = {
       nextToken?: string | null,
     } | null,
     createdAt?: string | null,
+    email: string,
     forms?:  {
       __typename: "ModelformModelConnection",
       nextToken?: string | null,
@@ -972,6 +1014,7 @@ export type UpdateAnswerModelMutation = {
     answeredby?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -985,13 +1028,15 @@ export type UpdateAnswerModelMutation = {
     questions?:  {
       __typename: "questionModel",
       createdAt?: string | null,
-      formId?: string | null,
+      formId: string,
+      options: Array< string | null >,
       owner?: string | null,
       question: string,
       questionId: string,
       updatedAt?: string | null,
       userId: string,
     } | null,
+    selectedOptions: Array< string | null >,
     updatedAt?: string | null,
     userId: string,
   } | null,
@@ -1009,6 +1054,7 @@ export type UpdateFormModelMutation = {
     createdBy?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -1040,9 +1086,10 @@ export type UpdateQuestionModelMutation = {
       __typename: "ModelanswerModelConnection",
       nextToken?: string | null,
     } | null,
-    askedBy?:  {
+    askedby?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -1060,7 +1107,8 @@ export type UpdateQuestionModelMutation = {
       updatedAt?: string | null,
       userId: string,
     } | null,
-    formId?: string | null,
+    formId: string,
+    options: Array< string | null >,
     owner?: string | null,
     question: string,
     questionId: string,
@@ -1082,6 +1130,7 @@ export type UpdateUserModelMutation = {
       nextToken?: string | null,
     } | null,
     createdAt?: string | null,
+    email: string,
     forms?:  {
       __typename: "ModelformModelConnection",
       nextToken?: string | null,
@@ -1112,6 +1161,7 @@ export type OnCreateAnswerModelSubscription = {
     answeredby?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -1125,13 +1175,15 @@ export type OnCreateAnswerModelSubscription = {
     questions?:  {
       __typename: "questionModel",
       createdAt?: string | null,
-      formId?: string | null,
+      formId: string,
+      options: Array< string | null >,
       owner?: string | null,
       question: string,
       questionId: string,
       updatedAt?: string | null,
       userId: string,
     } | null,
+    selectedOptions: Array< string | null >,
     updatedAt?: string | null,
     userId: string,
   } | null,
@@ -1149,6 +1201,7 @@ export type OnCreateFormModelSubscription = {
     createdBy?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -1180,9 +1233,10 @@ export type OnCreateQuestionModelSubscription = {
       __typename: "ModelanswerModelConnection",
       nextToken?: string | null,
     } | null,
-    askedBy?:  {
+    askedby?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -1200,7 +1254,8 @@ export type OnCreateQuestionModelSubscription = {
       updatedAt?: string | null,
       userId: string,
     } | null,
-    formId?: string | null,
+    formId: string,
+    options: Array< string | null >,
     owner?: string | null,
     question: string,
     questionId: string,
@@ -1222,6 +1277,7 @@ export type OnCreateUserModelSubscription = {
       nextToken?: string | null,
     } | null,
     createdAt?: string | null,
+    email: string,
     forms?:  {
       __typename: "ModelformModelConnection",
       nextToken?: string | null,
@@ -1252,6 +1308,7 @@ export type OnDeleteAnswerModelSubscription = {
     answeredby?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -1265,13 +1322,15 @@ export type OnDeleteAnswerModelSubscription = {
     questions?:  {
       __typename: "questionModel",
       createdAt?: string | null,
-      formId?: string | null,
+      formId: string,
+      options: Array< string | null >,
       owner?: string | null,
       question: string,
       questionId: string,
       updatedAt?: string | null,
       userId: string,
     } | null,
+    selectedOptions: Array< string | null >,
     updatedAt?: string | null,
     userId: string,
   } | null,
@@ -1289,6 +1348,7 @@ export type OnDeleteFormModelSubscription = {
     createdBy?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -1320,9 +1380,10 @@ export type OnDeleteQuestionModelSubscription = {
       __typename: "ModelanswerModelConnection",
       nextToken?: string | null,
     } | null,
-    askedBy?:  {
+    askedby?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -1340,7 +1401,8 @@ export type OnDeleteQuestionModelSubscription = {
       updatedAt?: string | null,
       userId: string,
     } | null,
-    formId?: string | null,
+    formId: string,
+    options: Array< string | null >,
     owner?: string | null,
     question: string,
     questionId: string,
@@ -1362,6 +1424,7 @@ export type OnDeleteUserModelSubscription = {
       nextToken?: string | null,
     } | null,
     createdAt?: string | null,
+    email: string,
     forms?:  {
       __typename: "ModelformModelConnection",
       nextToken?: string | null,
@@ -1392,6 +1455,7 @@ export type OnUpdateAnswerModelSubscription = {
     answeredby?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -1405,13 +1469,15 @@ export type OnUpdateAnswerModelSubscription = {
     questions?:  {
       __typename: "questionModel",
       createdAt?: string | null,
-      formId?: string | null,
+      formId: string,
+      options: Array< string | null >,
       owner?: string | null,
       question: string,
       questionId: string,
       updatedAt?: string | null,
       userId: string,
     } | null,
+    selectedOptions: Array< string | null >,
     updatedAt?: string | null,
     userId: string,
   } | null,
@@ -1429,6 +1495,7 @@ export type OnUpdateFormModelSubscription = {
     createdBy?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -1460,9 +1527,10 @@ export type OnUpdateQuestionModelSubscription = {
       __typename: "ModelanswerModelConnection",
       nextToken?: string | null,
     } | null,
-    askedBy?:  {
+    askedby?:  {
       __typename: "userModel",
       createdAt?: string | null,
+      email: string,
       isAdmin?: boolean | null,
       isModerator?: boolean | null,
       owner?: string | null,
@@ -1480,7 +1548,8 @@ export type OnUpdateQuestionModelSubscription = {
       updatedAt?: string | null,
       userId: string,
     } | null,
-    formId?: string | null,
+    formId: string,
+    options: Array< string | null >,
     owner?: string | null,
     question: string,
     questionId: string,
@@ -1502,6 +1571,7 @@ export type OnUpdateUserModelSubscription = {
       nextToken?: string | null,
     } | null,
     createdAt?: string | null,
+    email: string,
     forms?:  {
       __typename: "ModelformModelConnection",
       nextToken?: string | null,

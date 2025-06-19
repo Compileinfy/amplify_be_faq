@@ -14,6 +14,7 @@ export const getAnswerModel = /* GraphQL */ `query GetAnswerModel($answerId: ID!
     answerId
     answeredby {
       createdAt
+      email
       isAdmin
       isModerator
       owner
@@ -28,6 +29,7 @@ export const getAnswerModel = /* GraphQL */ `query GetAnswerModel($answerId: ID!
     questions {
       createdAt
       formId
+      options
       owner
       question
       questionId
@@ -35,6 +37,7 @@ export const getAnswerModel = /* GraphQL */ `query GetAnswerModel($answerId: ID!
       userId
       __typename
     }
+    selectedOptions
     updatedAt
     userId
     __typename
@@ -49,6 +52,7 @@ export const getFormModel = /* GraphQL */ `query GetFormModel($formId: ID!) {
     createdAt
     createdBy {
       createdAt
+      email
       isAdmin
       isModerator
       owner
@@ -79,8 +83,9 @@ export const getQuestionModel = /* GraphQL */ `query GetQuestionModel($questionI
       nextToken
       __typename
     }
-    askedBy {
+    askedby {
       createdAt
+      email
       isAdmin
       isModerator
       owner
@@ -100,6 +105,7 @@ export const getQuestionModel = /* GraphQL */ `query GetQuestionModel($questionI
       __typename
     }
     formId
+    options
     owner
     question
     questionId
@@ -119,6 +125,7 @@ export const getUserModel = /* GraphQL */ `query GetUserModel($userId: ID!) {
       __typename
     }
     createdAt
+    email
     forms {
       nextToken
       __typename
@@ -160,6 +167,7 @@ export const listAnswerModels = /* GraphQL */ `query ListAnswerModels(
       createdAt
       owner
       questionId
+      selectedOptions
       updatedAt
       userId
       __typename
@@ -220,6 +228,7 @@ export const listQuestionModels = /* GraphQL */ `query ListQuestionModels(
     items {
       createdAt
       formId
+      options
       owner
       question
       questionId
@@ -251,6 +260,7 @@ export const listUserModels = /* GraphQL */ `query ListUserModels(
   ) {
     items {
       createdAt
+      email
       isAdmin
       isModerator
       owner
