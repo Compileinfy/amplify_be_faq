@@ -49,27 +49,13 @@
               "name": "firstname",
               "isArray": false,
               "type": "String",
-              "isRequired": true,
+              "isRequired": false,
               "attributes": []
             },
             "lastname": {
               "name": "lastname",
               "isArray": false,
               "type": "String",
-              "isRequired": true,
-              "attributes": []
-            },
-            "isAdmin": {
-              "name": "isAdmin",
-              "isArray": false,
-              "type": "Boolean",
-              "isRequired": false,
-              "attributes": []
-            },
-            "isModerator": {
-              "name": "isModerator",
-              "isArray": false,
-              "type": "Boolean",
               "isRequired": false,
               "attributes": []
             },

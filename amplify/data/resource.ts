@@ -8,7 +8,7 @@ import { AnswerModel } from './models/AnswerModel';
 import { FormModel } from './models/FormModel';
 
 
-const schema: ReturnType<typeof a.schema> = a.schema({
+const schema = a.schema({
   userModel: UserModel,
   questionModel: QuestionModel,
   answerModel: AnswerModel,
@@ -18,9 +18,8 @@ const schema: ReturnType<typeof a.schema> = a.schema({
   allow.resource(postConfirmation)
 ]);
 
-// Use type assertion to avoid deep type instantiation issues
-// Infer the schema type directly to avoid deep type instantiation issues
-export type Schema = typeof schema;
+// Workaround for "Type instantiation is excessively deep and possibly infinite"
+export type Schema = ClientSchema<typeof schema>;
 
 export const data = defineData({
   schema,

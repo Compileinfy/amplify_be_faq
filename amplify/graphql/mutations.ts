@@ -19,8 +19,6 @@ export const createAnswerModel = /* GraphQL */ `mutation CreateAnswerModel(
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -58,8 +56,6 @@ export const createFormModel = /* GraphQL */ `mutation CreateFormModel(
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -93,8 +89,6 @@ export const createQuestionModel = /* GraphQL */ `mutation CreateQuestionModel(
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -138,8 +132,6 @@ export const createUserModel = /* GraphQL */ `mutation CreateUserModel(
       nextToken
       __typename
     }
-    isAdmin
-    isModerator
     lastname
     questions {
       nextToken
@@ -165,8 +157,6 @@ export const deleteAnswerModel = /* GraphQL */ `mutation DeleteAnswerModel(
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -204,8 +194,6 @@ export const deleteFormModel = /* GraphQL */ `mutation DeleteFormModel(
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -239,8 +227,6 @@ export const deleteQuestionModel = /* GraphQL */ `mutation DeleteQuestionModel(
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -284,8 +270,6 @@ export const deleteUserModel = /* GraphQL */ `mutation DeleteUserModel(
       nextToken
       __typename
     }
-    isAdmin
-    isModerator
     lastname
     questions {
       nextToken
@@ -311,8 +295,6 @@ export const updateAnswerModel = /* GraphQL */ `mutation UpdateAnswerModel(
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -350,8 +332,6 @@ export const updateFormModel = /* GraphQL */ `mutation UpdateFormModel(
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -385,8 +365,6 @@ export const updateQuestionModel = /* GraphQL */ `mutation UpdateQuestionModel(
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -430,8 +408,6 @@ export const updateUserModel = /* GraphQL */ `mutation UpdateUserModel(
       nextToken
       __typename
     }
-    isAdmin
-    isModerator
     lastname
     questions {
       nextToken
