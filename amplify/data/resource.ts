@@ -9,7 +9,7 @@ import { FormModel } from './models/FormModel';
 
 const schema = a.schema({
   userModel:UserModel,
-  questionModel:QuestionModel,
+  questionModel:QuestionModel, 
   answerModel:AnswerModel,
   formModel:FormModel,
 
