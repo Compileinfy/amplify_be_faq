@@ -171,6 +171,19 @@ export type ModelFormModelConnection = {
   nextToken?: string | null,
 };
 
+export type ModelquestionModelFilterInput = {
+  and?: Array< ModelquestionModelFilterInput | null > | null,
+  createdAt?: ModelStringInput | null,
+  formId?: ModelIDInput | null,
+  not?: ModelquestionModelFilterInput | null,
+  options?: ModelStringInput | null,
+  or?: Array< ModelquestionModelFilterInput | null > | null,
+  question?: ModelStringInput | null,
+  questionId?: ModelIDInput | null,
+  updatedAt?: ModelStringInput | null,
+  userId?: ModelIDInput | null,
+};
+
 export type ModelQuestionModelFilterInput = {
   and?: Array< ModelQuestionModelFilterInput | null > | null,
   createdAt?: ModelStringInput | null,
@@ -599,6 +612,31 @@ export type ListFormModelsQuery = {
       createdAt?: string | null,
       formId: string,
       title: string,
+      updatedAt?: string | null,
+      userId: string,
+    } | null >,
+    nextToken?: string | null,
+  } | null,
+};
+
+export type ListQuestionModelByFormIdQueryVariables = {
+  filter?: ModelquestionModelFilterInput | null,
+  formId: string,
+  limit?: number | null,
+  nextToken?: string | null,
+  sortDirection?: ModelSortDirection | null,
+};
+
+export type ListQuestionModelByFormIdQuery = {
+  listQuestionModelByFormId?:  {
+    __typename: "ModelquestionModelConnection",
+    items:  Array< {
+      __typename: "questionModel",
+      createdAt?: string | null,
+      formId: string,
+      options: Array< string | null >,
+      question: string,
+      questionId: string,
       updatedAt?: string | null,
       userId: string,
     } | null >,

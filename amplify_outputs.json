@@ -283,6 +283,16 @@
               }
             },
             {
+              "type": "key",
+              "properties": {
+                "name": "QuestionsByformId",
+                "queryField": "listQuestionModelByFormId",
+                "fields": [
+                  "formId"
+                ]
+              }
+            },
+            {
               "type": "auth",
               "properties": {
                 "rules": [

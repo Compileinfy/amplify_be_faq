@@ -196,6 +196,38 @@ export const listFormModels = /* GraphQL */ `query ListFormModels(
   APITypes.ListFormModelsQueryVariables,
   APITypes.ListFormModelsQuery
 >;
+export const listQuestionModelByFormId = /* GraphQL */ `query ListQuestionModelByFormId(
+  $filter: ModelquestionModelFilterInput
+  $formId: ID!
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listQuestionModelByFormId(
+    filter: $filter
+    formId: $formId
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      createdAt
+      formId
+      options
+      question
+      questionId
+      updatedAt
+      userId
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+` as GeneratedQuery<
+  APITypes.ListQuestionModelByFormIdQueryVariables,
+  APITypes.ListQuestionModelByFormIdQuery
+>;
 export const listQuestionModels = /* GraphQL */ `query ListQuestionModels(
   $filter: ModelQuestionModelFilterInput
   $limit: Int
