@@ -16,8 +16,6 @@ export const getAnswerModel = /* GraphQL */ `query GetAnswerModel($answerId: ID!
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -52,8 +50,6 @@ export const getFormModel = /* GraphQL */ `query GetFormModel($formId: ID!) {
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -84,8 +80,6 @@ export const getQuestionModel = /* GraphQL */ `query GetQuestionModel($questionI
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -126,8 +120,6 @@ export const getUserModel = /* GraphQL */ `query GetUserModel($userId: ID!) {
       nextToken
       __typename
     }
-    isAdmin
-    isModerator
     lastname
     questions {
       nextToken
@@ -254,8 +246,6 @@ export const listUserModels = /* GraphQL */ `query ListUserModels(
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId

@@ -18,8 +18,6 @@ export const onCreateAnswerModel = /* GraphQL */ `subscription OnCreateAnswerMod
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -54,8 +52,6 @@ export const onCreateFormModel = /* GraphQL */ `subscription OnCreateFormModel($
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -88,8 +84,6 @@ export const onCreateQuestionModel = /* GraphQL */ `subscription OnCreateQuestio
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -130,8 +124,6 @@ export const onCreateUserModel = /* GraphQL */ `subscription OnCreateUserModel($
       nextToken
       __typename
     }
-    isAdmin
-    isModerator
     lastname
     questions {
       nextToken
@@ -156,8 +148,6 @@ export const onDeleteAnswerModel = /* GraphQL */ `subscription OnDeleteAnswerMod
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -192,8 +182,6 @@ export const onDeleteFormModel = /* GraphQL */ `subscription OnDeleteFormModel($
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -226,8 +214,6 @@ export const onDeleteQuestionModel = /* GraphQL */ `subscription OnDeleteQuestio
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -268,8 +254,6 @@ export const onDeleteUserModel = /* GraphQL */ `subscription OnDeleteUserModel($
       nextToken
       __typename
     }
-    isAdmin
-    isModerator
     lastname
     questions {
       nextToken
@@ -294,8 +278,6 @@ export const onUpdateAnswerModel = /* GraphQL */ `subscription OnUpdateAnswerMod
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -330,8 +312,6 @@ export const onUpdateFormModel = /* GraphQL */ `subscription OnUpdateFormModel($
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -364,8 +344,6 @@ export const onUpdateQuestionModel = /* GraphQL */ `subscription OnUpdateQuestio
       createdAt
       email
       firstname
-      isAdmin
-      isModerator
       lastname
       updatedAt
       userId
@@ -406,8 +384,6 @@ export const onUpdateUserModel = /* GraphQL */ `subscription OnUpdateUserModel($
       nextToken
       __typename
     }
-    isAdmin
-    isModerator
     lastname
     questions {
       nextToken

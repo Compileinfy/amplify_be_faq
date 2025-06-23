@@ -29,6 +29,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.830.0",
     "aws-amplify": "^6.15.0"
   }
 }
