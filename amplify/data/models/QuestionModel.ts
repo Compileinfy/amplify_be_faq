@@ -12,4 +12,5 @@ export const QuestionModel = a
     form: a.belongsTo('formModel', 'formId'),
     createdAt: a.datetime(),
     updatedAt: a.datetime(),
-  }).identifier(["questionId"]);
+  }).identifier(["questionId"])
+  .secondaryIndexes(index => [index("formId").name("QuestionsByformId")]);
