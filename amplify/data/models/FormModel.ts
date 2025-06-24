@@ -2,7 +2,7 @@ import { a } from '@aws-amplify/backend';
 
 export const FormModel = a
   .model({
-    formId: a.id().required(),
+    formId: a.id(),
     title : a.string().required(),
     userId: a.id().required(),
     createdAt: a.datetime(),

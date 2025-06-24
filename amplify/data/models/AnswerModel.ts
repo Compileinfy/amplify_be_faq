@@ -2,7 +2,7 @@ import { a } from '@aws-amplify/backend';
 
 export const AnswerModel = a
   .model({
-    answerId: a.id().required(),
+    answerId: a.id(),
 
     questionId: a.id().required(),
     userId: a.id().required(),
