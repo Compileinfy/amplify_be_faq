@@ -35,6 +35,18 @@ export const handler: PostConfirmationTriggerHandler = async (event) => {
   const userPoolId = event.userPoolId;
   console.log("post conformation event:",{ userId,email, username, userPoolId });
   try {
+    await client.models.userModel.create({
+        userId,
+        email,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+    });
+    console.log("User created in data model");
+  } catch (error) {
+    console.error("Failed to create user in data model", error);  
+  }
+
+  try {
         await addUserToGroup(username, userPoolId);
     } catch (groupError) {
         console.log("Failed to add user to group", groupError, 'error');

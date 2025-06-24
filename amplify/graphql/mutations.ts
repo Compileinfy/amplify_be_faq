@@ -13,7 +13,6 @@ export const createAnswerModel = /* GraphQL */ `mutation CreateAnswerModel(
   $input: CreateAnswerModelInput!
 ) {
   createAnswerModel(condition: $condition, input: $input) {
-    answer
     answerId
     answeredby {
       createdAt
@@ -151,7 +150,6 @@ export const deleteAnswerModel = /* GraphQL */ `mutation DeleteAnswerModel(
   $input: DeleteAnswerModelInput!
 ) {
   deleteAnswerModel(condition: $condition, input: $input) {
-    answer
     answerId
     answeredby {
       createdAt
@@ -289,7 +287,6 @@ export const updateAnswerModel = /* GraphQL */ `mutation UpdateAnswerModel(
   $input: UpdateAnswerModelInput!
 ) {
   updateAnswerModel(condition: $condition, input: $input) {
-    answer
     answerId
     answeredby {
       createdAt

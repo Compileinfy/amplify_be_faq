@@ -14,7 +14,18 @@
     "user_verification_types": [
       "email"
     ],
-    "groups": [],
+    "groups": [
+      {
+        "ADMIN": {
+          "precedence": 0
+        }
+      },
+      {
+        "USER": {
+          "precedence": 1
+        }
+      }
+    ],
     "mfa_configuration": "NONE",
     "password_policy": {
       "min_length": 8,
@@ -322,13 +333,6 @@
               "name": "answerId",
               "isArray": false,
               "type": "ID",
-              "isRequired": true,
-              "attributes": []
-            },
-            "answer": {
-              "name": "answer",
-              "isArray": false,
-              "type": "String",
               "isRequired": true,
               "attributes": []
             },
