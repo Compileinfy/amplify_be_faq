@@ -4,8 +4,8 @@ export const AnswerModel = a
   .model({
     answerId: a.id(),
 
-    questionId: a.id().required(),
-    userId: a.id().required(),
+    questionId: a.id(),
+    userId: a.id(),
     selectedOptions: a.string().array().required(),
     questions: a.belongsTo('questionModel','questionId'),
 
