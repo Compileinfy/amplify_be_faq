@@ -4,7 +4,6 @@
 
 export type answerModel = {
   __typename: "answerModel",
-  answer: string,
   answerId: string,
   answeredby?: userModel | null,
   createdAt?: string | null,
@@ -73,7 +72,6 @@ export type questionModel = {
 
 export type ModelAnswerModelFilterInput = {
   and?: Array< ModelAnswerModelFilterInput | null > | null,
-  answer?: ModelStringInput | null,
   answerId?: ModelIDInput | null,
   createdAt?: ModelStringInput | null,
   id?: ModelIDInput | null,
@@ -85,7 +83,7 @@ export type ModelAnswerModelFilterInput = {
   userId?: ModelIDInput | null,
 };
 
-export type ModelStringInput = {
+export type ModelIDInput = {
   attributeExists?: boolean | null,
   attributeType?: ModelAttributeTypes | null,
   beginsWith?: string | null,
@@ -125,7 +123,7 @@ export type ModelSizeInput = {
   ne?: number | null,
 };
 
-export type ModelIDInput = {
+export type ModelStringInput = {
   attributeExists?: boolean | null,
   attributeType?: ModelAttributeTypes | null,
   beginsWith?: string | null,
@@ -171,6 +169,19 @@ export type ModelFormModelConnection = {
   nextToken?: string | null,
 };
 
+export type ModelquestionModelFilterInput = {
+  and?: Array< ModelquestionModelFilterInput | null > | null,
+  createdAt?: ModelStringInput | null,
+  formId?: ModelIDInput | null,
+  not?: ModelquestionModelFilterInput | null,
+  options?: ModelStringInput | null,
+  or?: Array< ModelquestionModelFilterInput | null > | null,
+  question?: ModelStringInput | null,
+  questionId?: ModelIDInput | null,
+  updatedAt?: ModelStringInput | null,
+  userId?: ModelIDInput | null,
+};
+
 export type ModelQuestionModelFilterInput = {
   and?: Array< ModelQuestionModelFilterInput | null > | null,
   createdAt?: ModelStringInput | null,
@@ -212,7 +223,6 @@ export type ModelUserModelConnection = {
 
 export type ModelAnswerModelConditionInput = {
   and?: Array< ModelAnswerModelConditionInput | null > | null,
-  answer?: ModelStringInput | null,
   answerId?: ModelIDInput | null,
   createdAt?: ModelStringInput | null,
   not?: ModelAnswerModelConditionInput | null,
@@ -224,7 +234,6 @@ export type ModelAnswerModelConditionInput = {
 };
 
 export type CreateAnswerModelInput = {
-  answer: string,
   answerId: string,
   createdAt?: string | null,
   questionId: string,
@@ -313,7 +322,6 @@ export type DeleteUserModelInput = {
 };
 
 export type UpdateAnswerModelInput = {
-  answer?: string | null,
   answerId: string,
   createdAt?: string | null,
   questionId?: string | null,
@@ -351,7 +359,6 @@ export type UpdateUserModelInput = {
 
 export type ModelSubscriptionAnswerModelFilterInput = {
   and?: Array< ModelSubscriptionAnswerModelFilterInput | null > | null,
-  answer?: ModelSubscriptionStringInput | null,
   answerId?: ModelSubscriptionIDInput | null,
   createdAt?: ModelSubscriptionStringInput | null,
   id?: ModelSubscriptionIDInput | null,
@@ -362,7 +369,7 @@ export type ModelSubscriptionAnswerModelFilterInput = {
   userId?: ModelSubscriptionIDInput | null,
 };
 
-export type ModelSubscriptionStringInput = {
+export type ModelSubscriptionIDInput = {
   beginsWith?: string | null,
   between?: Array< string | null > | null,
   contains?: string | null,
@@ -377,7 +384,7 @@ export type ModelSubscriptionStringInput = {
   notIn?: Array< string | null > | null,
 };
 
-export type ModelSubscriptionIDInput = {
+export type ModelSubscriptionStringInput = {
   beginsWith?: string | null,
   between?: Array< string | null > | null,
   contains?: string | null,
@@ -435,7 +442,6 @@ export type GetAnswerModelQueryVariables = {
 export type GetAnswerModelQuery = {
   getAnswerModel?:  {
     __typename: "answerModel",
-    answer: string,
     answerId: string,
     answeredby?:  {
       __typename: "userModel",
@@ -571,7 +577,6 @@ export type ListAnswerModelsQuery = {
     __typename: "ModelAnswerModelConnection",
     items:  Array< {
       __typename: "answerModel",
-      answer: string,
       answerId: string,
       createdAt?: string | null,
       questionId: string,
@@ -599,6 +604,31 @@ export type ListFormModelsQuery = {
       createdAt?: string | null,
       formId: string,
       title: string,
+      updatedAt?: string | null,
+      userId: string,
+    } | null >,
+    nextToken?: string | null,
+  } | null,
+};
+
+export type ListQuestionModelByFormIdQueryVariables = {
+  filter?: ModelquestionModelFilterInput | null,
+  formId: string,
+  limit?: number | null,
+  nextToken?: string | null,
+  sortDirection?: ModelSortDirection | null,
+};
+
+export type ListQuestionModelByFormIdQuery = {
+  listQuestionModelByFormId?:  {
+    __typename: "ModelquestionModelConnection",
+    items:  Array< {
+      __typename: "questionModel",
+      createdAt?: string | null,
+      formId: string,
+      options: Array< string | null >,
+      question: string,
+      questionId: string,
       updatedAt?: string | null,
       userId: string,
     } | null >,
@@ -663,7 +693,6 @@ export type CreateAnswerModelMutationVariables = {
 export type CreateAnswerModelMutation = {
   createAnswerModel?:  {
     __typename: "answerModel",
-    answer: string,
     answerId: string,
     answeredby?:  {
       __typename: "userModel",
@@ -797,7 +826,6 @@ export type DeleteAnswerModelMutationVariables = {
 export type DeleteAnswerModelMutation = {
   deleteAnswerModel?:  {
     __typename: "answerModel",
-    answer: string,
     answerId: string,
     answeredby?:  {
       __typename: "userModel",
@@ -931,7 +959,6 @@ export type UpdateAnswerModelMutationVariables = {
 export type UpdateAnswerModelMutation = {
   updateAnswerModel?:  {
     __typename: "answerModel",
-    answer: string,
     answerId: string,
     answeredby?:  {
       __typename: "userModel",
@@ -1064,7 +1091,6 @@ export type OnCreateAnswerModelSubscriptionVariables = {
 export type OnCreateAnswerModelSubscription = {
   onCreateAnswerModel?:  {
     __typename: "answerModel",
-    answer: string,
     answerId: string,
     answeredby?:  {
       __typename: "userModel",
@@ -1194,7 +1220,6 @@ export type OnDeleteAnswerModelSubscriptionVariables = {
 export type OnDeleteAnswerModelSubscription = {
   onDeleteAnswerModel?:  {
     __typename: "answerModel",
-    answer: string,
     answerId: string,
     answeredby?:  {
       __typename: "userModel",
@@ -1324,7 +1349,6 @@ export type OnUpdateAnswerModelSubscriptionVariables = {
 export type OnUpdateAnswerModelSubscription = {
   onUpdateAnswerModel?:  {
     __typename: "answerModel",
-    answer: string,
     answerId: string,
     answeredby?:  {
       __typename: "userModel",

@@ -12,7 +12,6 @@ export const onCreateAnswerModel = /* GraphQL */ `subscription OnCreateAnswerMod
   $filter: ModelSubscriptionAnswerModelFilterInput
 ) {
   onCreateAnswerModel(filter: $filter) {
-    answer
     answerId
     answeredby {
       createdAt
@@ -142,7 +141,6 @@ export const onDeleteAnswerModel = /* GraphQL */ `subscription OnDeleteAnswerMod
   $filter: ModelSubscriptionAnswerModelFilterInput
 ) {
   onDeleteAnswerModel(filter: $filter) {
-    answer
     answerId
     answeredby {
       createdAt
@@ -272,7 +270,6 @@ export const onUpdateAnswerModel = /* GraphQL */ `subscription OnUpdateAnswerMod
   $filter: ModelSubscriptionAnswerModelFilterInput
 ) {
   onUpdateAnswerModel(filter: $filter) {
-    answer
     answerId
     answeredby {
       createdAt
