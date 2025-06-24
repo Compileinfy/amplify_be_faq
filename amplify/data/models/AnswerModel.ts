@@ -12,4 +12,4 @@ export const AnswerModel = a
     answeredby: a.belongsTo('userModel','userId'),
     createdAt: a.datetime(),
     updatedAt: a.datetime(),
-  }).identifier(["answerId"]);;
+  }).identifier(["answerId"]);; 

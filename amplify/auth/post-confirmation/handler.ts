@@ -41,9 +41,22 @@ export const handler: PostConfirmationTriggerHandler = async (event) => {
     const userPoolId = event.userPoolId;
     console.log("Post confirmation event:", { userId, email, username, userPoolId });
 
-  await client.models.userModel.create({
-      email: event.request.userAttributes.email,
-  });
+    
+    try {
+        await client.models.userModel.create({
+            userId,
+            email,
+           
+            createdAt: new Date().toISOString(),  
+            updatedAt: new Date().toISOString()
+        });
+        console.log("User created in data store");
+    } catch (error) {
+        console.error("Error creating user in data store", error);
+    }
+
+    
+
 
    try {
             await addUserToGroup(username, userPoolId);
