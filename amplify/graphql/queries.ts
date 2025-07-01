@@ -8,31 +8,284 @@ type GeneratedQuery<InputType, OutputType> = string & {
   __generatedQueryOutput: OutputType;
 };
 
-export const getTodo = /* GraphQL */ `query GetTodo($id: ID!) {
-  getTodo(id: $id) {
-    content
+export const getAnswerModel = /* GraphQL */ `query GetAnswerModel($answerId: ID!) {
+  getAnswerModel(answerId: $answerId) {
+    answerId
+    answeredby {
+      createdAt
+      email
+      firstname
+      lastname
+      updatedAt
+      userId
+      __typename
+    }
     createdAt
-    id
+    questionId
+    questions {
+      createdAt
+      formId
+      options
+      question
+      questionId
+      updatedAt
+      userId
+      __typename
+    }
+    selectedOptions
     updatedAt
+    userId
     __typename
   }
 }
-` as GeneratedQuery<APITypes.GetTodoQueryVariables, APITypes.GetTodoQuery>;
-export const listTodos = /* GraphQL */ `query ListTodos(
-  $filter: ModelTodoFilterInput
+` as GeneratedQuery<
+  APITypes.GetAnswerModelQueryVariables,
+  APITypes.GetAnswerModelQuery
+>;
+export const getFormModel = /* GraphQL */ `query GetFormModel($formId: ID!) {
+  getFormModel(formId: $formId) {
+    createdAt
+    createdBy {
+      createdAt
+      email
+      firstname
+      lastname
+      updatedAt
+      userId
+      __typename
+    }
+    formId
+    formQuestions {
+      nextToken
+      __typename
+    }
+    title
+    updatedAt
+    userId
+    __typename
+  }
+}
+` as GeneratedQuery<
+  APITypes.GetFormModelQueryVariables,
+  APITypes.GetFormModelQuery
+>;
+export const getQuestionModel = /* GraphQL */ `query GetQuestionModel($questionId: ID!) {
+  getQuestionModel(questionId: $questionId) {
+    answers {
+      nextToken
+      __typename
+    }
+    askedby {
+      createdAt
+      email
+      firstname
+      lastname
+      updatedAt
+      userId
+      __typename
+    }
+    createdAt
+    form {
+      createdAt
+      formId
+      title
+      updatedAt
+      userId
+      __typename
+    }
+    formId
+    options
+    question
+    questionId
+    updatedAt
+    userId
+    __typename
+  }
+}
+` as GeneratedQuery<
+  APITypes.GetQuestionModelQueryVariables,
+  APITypes.GetQuestionModelQuery
+>;
+export const getUserModel = /* GraphQL */ `query GetUserModel($userId: ID!) {
+  getUserModel(userId: $userId) {
+    answers {
+      nextToken
+      __typename
+    }
+    createdAt
+    email
+    firstname
+    forms {
+      nextToken
+      __typename
+    }
+    lastname
+    questions {
+      nextToken
+      __typename
+    }
+    updatedAt
+    userId
+    __typename
+  }
+}
+` as GeneratedQuery<
+  APITypes.GetUserModelQueryVariables,
+  APITypes.GetUserModelQuery
+>;
+export const listAnswerModels = /* GraphQL */ `query ListAnswerModels(
+  $answerId: ID
+  $filter: ModelAnswerModelFilterInput
   $limit: Int
   $nextToken: String
+  $sortDirection: ModelSortDirection
 ) {
-  listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
+  listAnswerModels(
+    answerId: $answerId
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
     items {
-      content
+      answerId
       createdAt
-      id
+      questionId
+      selectedOptions
       updatedAt
+      userId
       __typename
     }
     nextToken
     __typename
   }
 }
-` as GeneratedQuery<APITypes.ListTodosQueryVariables, APITypes.ListTodosQuery>;
+` as GeneratedQuery<
+  APITypes.ListAnswerModelsQueryVariables,
+  APITypes.ListAnswerModelsQuery
+>;
+export const listFormModels = /* GraphQL */ `query ListFormModels(
+  $filter: ModelFormModelFilterInput
+  $formId: ID
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listFormModels(
+    filter: $filter
+    formId: $formId
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      createdAt
+      formId
+      title
+      updatedAt
+      userId
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+` as GeneratedQuery<
+  APITypes.ListFormModelsQueryVariables,
+  APITypes.ListFormModelsQuery
+>;
+export const listQuestionModelByFormId = /* GraphQL */ `query ListQuestionModelByFormId(
+  $filter: ModelquestionModelFilterInput
+  $formId: ID!
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listQuestionModelByFormId(
+    filter: $filter
+    formId: $formId
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      createdAt
+      formId
+      options
+      question
+      questionId
+      updatedAt
+      userId
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+` as GeneratedQuery<
+  APITypes.ListQuestionModelByFormIdQueryVariables,
+  APITypes.ListQuestionModelByFormIdQuery
+>;
+export const listQuestionModels = /* GraphQL */ `query ListQuestionModels(
+  $filter: ModelQuestionModelFilterInput
+  $limit: Int
+  $nextToken: String
+  $questionId: ID
+  $sortDirection: ModelSortDirection
+) {
+  listQuestionModels(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    questionId: $questionId
+    sortDirection: $sortDirection
+  ) {
+    items {
+      createdAt
+      formId
+      options
+      question
+      questionId
+      updatedAt
+      userId
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+` as GeneratedQuery<
+  APITypes.ListQuestionModelsQueryVariables,
+  APITypes.ListQuestionModelsQuery
+>;
+export const listUserModels = /* GraphQL */ `query ListUserModels(
+  $filter: ModelUserModelFilterInput
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+  $userId: ID
+) {
+  listUserModels(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+    userId: $userId
+  ) {
+    items {
+      createdAt
+      email
+      firstname
+      lastname
+      updatedAt
+      userId
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+` as GeneratedQuery<
+  APITypes.ListUserModelsQueryVariables,
+  APITypes.ListUserModelsQuery
+>;

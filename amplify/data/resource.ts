@@ -1,18 +1,24 @@
 import { type ClientSchema, a, defineData } from '@aws-amplify/backend';
 
-import { UserModel } from './model/UserModel';
-import { QuestionModel } from './model/QuestionModel';
-import { AnswerModel } from './model/AnswerModel';
+import { postConfirmation } from "../auth/post-confirmation/resource";
+
+import { UserModel } from './models/UserModel';
+import { QuestionModel } from './models/QuestionModel';
+import { AnswerModel } from './models/AnswerModel';
+import { FormModel } from './models/FormModel';
 
 
 const schema = a.schema({
-  UserModel,
-  QuestionModel,
-  AnswerModel,
+  userModel: UserModel,
+  questionModel: QuestionModel,
+  answerModel: AnswerModel,
+  formModel: FormModel,
 }).authorization((allow) => [
   allow.authenticated(),
+  allow.resource(postConfirmation)
 ]);
 
+// Workaround for "Type instantiation is excessively deep and possibly infinite"
 export type Schema = ClientSchema<typeof schema>;
 
 export const data = defineData({
@@ -21,4 +27,3 @@ export const data = defineData({
     defaultAuthorizationMode: 'userPool',
   },
 });
-
