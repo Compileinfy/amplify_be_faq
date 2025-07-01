@@ -5,6 +5,8 @@ export const UserModel = a
     userId: a.id(),
     firstname: a.string(),
     lastname: a.string(),
+    // isAdmin: a.boolean().default(false),
+    // isModerator: a.boolean().default(false),
     email: a.email().required(),
     createdAt: a.datetime(),
     updatedAt: a.datetime(),

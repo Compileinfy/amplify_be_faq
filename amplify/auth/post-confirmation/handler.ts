@@ -3,20 +3,25 @@ import { type Schema } from "../../data/resource";
 import { Amplify } from "aws-amplify";
 import { generateClient } from "aws-amplify/data";
 import { getAmplifyDataClientConfig } from '@aws-amplify/backend/function/runtime';
+// Update the import path to the correct relative path or actual module location
 import { env } from "$amplify/env/post-confirmation";
-import { CognitoIdentityProviderClient, AdminAddUserToGroupCommand } from "@aws-sdk/client-cognito-identity-provider";
-import { profileGroups } from "../profileGroups";
+import { profileGroups } from './../profileGroups';
 
+import {
+    CognitoIdentityProviderClient,
+    AdminAddUserToGroupCommand
+} from '@aws-sdk/client-cognito-identity-provider';
 
-const { resourceConfig, libraryOptions } = await getAmplifyDataClientConfig(env);
+const { resourceConfig, libraryOptions } = await getAmplifyDataClientConfig(
+  env
+); 
 
 Amplify.configure(resourceConfig, libraryOptions);
 
- const client = generateClient<any>();
- const cognitoClient = new CognitoIdentityProviderClient();
+const client = generateClient<Schema>();
+const cognitoClient = new CognitoIdentityProviderClient();
 
-
- async function addUserToGroup(username: string, userPoolId: string): Promise<void> {
+async function addUserToGroup(username: string, userPoolId: string): Promise<void> {
     const command = new AdminAddUserToGroupCommand({
         GroupName: profileGroups.USER,
         Username: username,
@@ -27,29 +32,37 @@ Amplify.configure(resourceConfig, libraryOptions);
     console.log("User added to Cognito group", { requestId: response.$metadata.requestId });
 }
 
+
 export const handler: PostConfirmationTriggerHandler = async (event) => {
 
-  const userId = event.request.userAttributes.sub;
-  const email = event.request.userAttributes.email;
-  const username = event.userName;
-  const userPoolId = event.userPoolId;
-  console.log("post conformation event:",{ userId,email, username, userPoolId });
-  try {
-    await client.models.userModel.create({
-        userId,
-        email,
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString()
-    });
-    console.log("User created in data model");
-  } catch (error) {
-    console.error("Failed to create user in data model", error);  
-  }
+   const userId = event.request.userAttributes.sub;
+    const email = event.request.userAttributes.email;
+    const username = event.userName;
+    const userPoolId = event.userPoolId;
+    console.log("Post confirmation event:", { userId, email, username, userPoolId });
 
-  try {
-        await addUserToGroup(username, userPoolId);
-    } catch (groupError) {
-        console.log("Failed to add user to group", groupError, 'error');
-  }
+    
+    try {
+        await client.models.userModel.create({
+            userId,
+            email,
+           
+            createdAt: new Date().toISOString(),  
+            updatedAt: new Date().toISOString()
+        });
+        console.log("User created in data store");
+    } catch (error) {
+        console.error("Error creating user in data store", error);
+    }
+
+    
+
+
+   try {
+            await addUserToGroup(username, userPoolId);
+        } catch (groupError) {
+            console.log("Failed to add user to group", groupError);
+        }
+
   return event;
 };

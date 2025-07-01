@@ -21,6 +21,7 @@ export const getAnswerModel = /* GraphQL */ `query GetAnswerModel($answerId: ID!
       __typename
     }
     createdAt
+    formId
     questionId
     questions {
       createdAt
@@ -133,6 +134,38 @@ export const getUserModel = /* GraphQL */ `query GetUserModel($userId: ID!) {
   APITypes.GetUserModelQueryVariables,
   APITypes.GetUserModelQuery
 >;
+export const listAnswerModelByFormId = /* GraphQL */ `query ListAnswerModelByFormId(
+  $filter: ModelanswerModelFilterInput
+  $formId: ID!
+  $limit: Int
+  $nextToken: String
+  $sortDirection: ModelSortDirection
+) {
+  listAnswerModelByFormId(
+    filter: $filter
+    formId: $formId
+    limit: $limit
+    nextToken: $nextToken
+    sortDirection: $sortDirection
+  ) {
+    items {
+      answerId
+      createdAt
+      formId
+      questionId
+      selectedOptions
+      updatedAt
+      userId
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}
+` as GeneratedQuery<
+  APITypes.ListAnswerModelByFormIdQueryVariables,
+  APITypes.ListAnswerModelByFormIdQuery
+>;
 export const listAnswerModels = /* GraphQL */ `query ListAnswerModels(
   $answerId: ID
   $filter: ModelAnswerModelFilterInput
@@ -150,6 +183,7 @@ export const listAnswerModels = /* GraphQL */ `query ListAnswerModels(
     items {
       answerId
       createdAt
+      formId
       questionId
       selectedOptions
       updatedAt

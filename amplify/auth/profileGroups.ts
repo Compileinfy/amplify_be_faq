@@ -1,5 +1,4 @@
-
-export enum profileGroups  {
-    ADMIN = "ADMIN",
-    USER = "USER",
+export enum profileGroups {
+  ADMIN = 'ADMIN',
+  USER = 'USER',
 }
