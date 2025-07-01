@@ -3,4 +3,5 @@ node_modules
 # amplify
 .amplify
 amplify_outputs*
+amplify_outputs.json
 amplifyconfiguration*
