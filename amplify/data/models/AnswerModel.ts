@@ -6,10 +6,14 @@ export const AnswerModel = a
 
     questionId: a.id(),
     userId: a.id(),
+    formId: a.id().required(),
     selectedOptions: a.string().array().required(),
     questions: a.belongsTo('questionModel','questionId'),
 
     answeredby: a.belongsTo('userModel','userId'),
     createdAt: a.datetime(),
     updatedAt: a.datetime(),
-  }).identifier(["answerId"]);; 
+  }).identifier(["answerId"])
+  .secondaryIndexes(index => [
+    index("formId").name("AnswersByFormId"), 
+  ]);
