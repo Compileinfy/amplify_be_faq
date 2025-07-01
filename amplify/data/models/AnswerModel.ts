@@ -9,7 +9,6 @@ export const AnswerModel = a
     formId: a.id().required(),
     selectedOptions: a.string().array().required(),
     questions: a.belongsTo('questionModel','questionId'),
-
     answeredby: a.belongsTo('userModel','userId'),
     createdAt: a.datetime(),
     updatedAt: a.datetime(),
