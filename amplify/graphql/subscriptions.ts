@@ -23,6 +23,7 @@ export const onCreateAnswerModel = /* GraphQL */ `subscription OnCreateAnswerMod
       __typename
     }
     createdAt
+    formId
     questionId
     questions {
       createdAt
@@ -152,6 +153,7 @@ export const onDeleteAnswerModel = /* GraphQL */ `subscription OnDeleteAnswerMod
       __typename
     }
     createdAt
+    formId
     questionId
     questions {
       createdAt
@@ -281,6 +283,7 @@ export const onUpdateAnswerModel = /* GraphQL */ `subscription OnUpdateAnswerMod
       __typename
     }
     createdAt
+    formId
     questionId
     questions {
       createdAt

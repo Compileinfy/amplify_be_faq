@@ -7,11 +7,12 @@ export type answerModel = {
   answerId: string,
   answeredby?: userModel | null,
   createdAt?: string | null,
-  questionId: string,
+  formId: string,
+  questionId?: string | null,
   questions?: questionModel | null,
   selectedOptions: Array< string | null >,
   updatedAt?: string | null,
-  userId: string,
+  userId?: string | null,
 };
 
 export type userModel = {
@@ -70,13 +71,13 @@ export type questionModel = {
   userId: string,
 };
 
-export type ModelAnswerModelFilterInput = {
-  and?: Array< ModelAnswerModelFilterInput | null > | null,
+export type ModelanswerModelFilterInput = {
+  and?: Array< ModelanswerModelFilterInput | null > | null,
   answerId?: ModelIDInput | null,
   createdAt?: ModelStringInput | null,
-  id?: ModelIDInput | null,
-  not?: ModelAnswerModelFilterInput | null,
-  or?: Array< ModelAnswerModelFilterInput | null > | null,
+  formId?: ModelIDInput | null,
+  not?: ModelanswerModelFilterInput | null,
+  or?: Array< ModelanswerModelFilterInput | null > | null,
   questionId?: ModelIDInput | null,
   selectedOptions?: ModelStringInput | null,
   updatedAt?: ModelStringInput | null,
@@ -144,6 +145,20 @@ export enum ModelSortDirection {
   DESC = "DESC",
 }
 
+
+export type ModelAnswerModelFilterInput = {
+  and?: Array< ModelAnswerModelFilterInput | null > | null,
+  answerId?: ModelIDInput | null,
+  createdAt?: ModelStringInput | null,
+  formId?: ModelIDInput | null,
+  id?: ModelIDInput | null,
+  not?: ModelAnswerModelFilterInput | null,
+  or?: Array< ModelAnswerModelFilterInput | null > | null,
+  questionId?: ModelIDInput | null,
+  selectedOptions?: ModelStringInput | null,
+  updatedAt?: ModelStringInput | null,
+  userId?: ModelIDInput | null,
+};
 
 export type ModelAnswerModelConnection = {
   __typename: "ModelAnswerModelConnection",
@@ -225,6 +240,7 @@ export type ModelAnswerModelConditionInput = {
   and?: Array< ModelAnswerModelConditionInput | null > | null,
   answerId?: ModelIDInput | null,
   createdAt?: ModelStringInput | null,
+  formId?: ModelIDInput | null,
   not?: ModelAnswerModelConditionInput | null,
   or?: Array< ModelAnswerModelConditionInput | null > | null,
   questionId?: ModelIDInput | null,
@@ -236,10 +252,11 @@ export type ModelAnswerModelConditionInput = {
 export type CreateAnswerModelInput = {
   answerId: string,
   createdAt?: string | null,
-  questionId: string,
+  formId: string,
+  questionId?: string | null,
   selectedOptions: Array< string | null >,
   updatedAt?: string | null,
-  userId: string,
+  userId?: string | null,
 };
 
 export type ModelFormModelConditionInput = {
@@ -324,6 +341,7 @@ export type DeleteUserModelInput = {
 export type UpdateAnswerModelInput = {
   answerId: string,
   createdAt?: string | null,
+  formId?: string | null,
   questionId?: string | null,
   selectedOptions?: Array< string | null > | null,
   updatedAt?: string | null,
@@ -361,6 +379,7 @@ export type ModelSubscriptionAnswerModelFilterInput = {
   and?: Array< ModelSubscriptionAnswerModelFilterInput | null > | null,
   answerId?: ModelSubscriptionIDInput | null,
   createdAt?: ModelSubscriptionStringInput | null,
+  formId?: ModelSubscriptionIDInput | null,
   id?: ModelSubscriptionIDInput | null,
   or?: Array< ModelSubscriptionAnswerModelFilterInput | null > | null,
   questionId?: ModelSubscriptionIDInput | null,
@@ -453,7 +472,8 @@ export type GetAnswerModelQuery = {
       userId: string,
     } | null,
     createdAt?: string | null,
-    questionId: string,
+    formId: string,
+    questionId?: string | null,
     questions?:  {
       __typename: "questionModel",
       createdAt?: string | null,
@@ -466,7 +486,7 @@ export type GetAnswerModelQuery = {
     } | null,
     selectedOptions: Array< string | null >,
     updatedAt?: string | null,
-    userId: string,
+    userId?: string | null,
   } | null,
 };
 
@@ -564,6 +584,31 @@ export type GetUserModelQuery = {
   } | null,
 };
 
+export type ListAnswerModelByFormIdQueryVariables = {
+  filter?: ModelanswerModelFilterInput | null,
+  formId: string,
+  limit?: number | null,
+  nextToken?: string | null,
+  sortDirection?: ModelSortDirection | null,
+};
+
+export type ListAnswerModelByFormIdQuery = {
+  listAnswerModelByFormId?:  {
+    __typename: "ModelanswerModelConnection",
+    items:  Array< {
+      __typename: "answerModel",
+      answerId: string,
+      createdAt?: string | null,
+      formId: string,
+      questionId?: string | null,
+      selectedOptions: Array< string | null >,
+      updatedAt?: string | null,
+      userId?: string | null,
+    } | null >,
+    nextToken?: string | null,
+  } | null,
+};
+
 export type ListAnswerModelsQueryVariables = {
   answerId?: string | null,
   filter?: ModelAnswerModelFilterInput | null,
@@ -579,10 +624,11 @@ export type ListAnswerModelsQuery = {
       __typename: "answerModel",
       answerId: string,
       createdAt?: string | null,
-      questionId: string,
+      formId: string,
+      questionId?: string | null,
       selectedOptions: Array< string | null >,
       updatedAt?: string | null,
-      userId: string,
+      userId?: string | null,
     } | null >,
     nextToken?: string | null,
   } | null,
@@ -704,7 +750,8 @@ export type CreateAnswerModelMutation = {
       userId: string,
     } | null,
     createdAt?: string | null,
-    questionId: string,
+    formId: string,
+    questionId?: string | null,
     questions?:  {
       __typename: "questionModel",
       createdAt?: string | null,
@@ -717,7 +764,7 @@ export type CreateAnswerModelMutation = {
     } | null,
     selectedOptions: Array< string | null >,
     updatedAt?: string | null,
-    userId: string,
+    userId?: string | null,
   } | null,
 };
 
@@ -837,7 +884,8 @@ export type DeleteAnswerModelMutation = {
       userId: string,
     } | null,
     createdAt?: string | null,
-    questionId: string,
+    formId: string,
+    questionId?: string | null,
     questions?:  {
       __typename: "questionModel",
       createdAt?: string | null,
@@ -850,7 +898,7 @@ export type DeleteAnswerModelMutation = {
     } | null,
     selectedOptions: Array< string | null >,
     updatedAt?: string | null,
-    userId: string,
+    userId?: string | null,
   } | null,
 };
 
@@ -970,7 +1018,8 @@ export type UpdateAnswerModelMutation = {
       userId: string,
     } | null,
     createdAt?: string | null,
-    questionId: string,
+    formId: string,
+    questionId?: string | null,
     questions?:  {
       __typename: "questionModel",
       createdAt?: string | null,
@@ -983,7 +1032,7 @@ export type UpdateAnswerModelMutation = {
     } | null,
     selectedOptions: Array< string | null >,
     updatedAt?: string | null,
-    userId: string,
+    userId?: string | null,
   } | null,
 };
 
@@ -1102,7 +1151,8 @@ export type OnCreateAnswerModelSubscription = {
       userId: string,
     } | null,
     createdAt?: string | null,
-    questionId: string,
+    formId: string,
+    questionId?: string | null,
     questions?:  {
       __typename: "questionModel",
       createdAt?: string | null,
@@ -1115,7 +1165,7 @@ export type OnCreateAnswerModelSubscription = {
     } | null,
     selectedOptions: Array< string | null >,
     updatedAt?: string | null,
-    userId: string,
+    userId?: string | null,
   } | null,
 };
 
@@ -1231,7 +1281,8 @@ export type OnDeleteAnswerModelSubscription = {
       userId: string,
     } | null,
     createdAt?: string | null,
-    questionId: string,
+    formId: string,
+    questionId?: string | null,
     questions?:  {
       __typename: "questionModel",
       createdAt?: string | null,
@@ -1244,7 +1295,7 @@ export type OnDeleteAnswerModelSubscription = {
     } | null,
     selectedOptions: Array< string | null >,
     updatedAt?: string | null,
-    userId: string,
+    userId?: string | null,
   } | null,
 };
 
@@ -1360,7 +1411,8 @@ export type OnUpdateAnswerModelSubscription = {
       userId: string,
     } | null,
     createdAt?: string | null,
-    questionId: string,
+    formId: string,
+    questionId?: string | null,
     questions?:  {
       __typename: "questionModel",
       createdAt?: string | null,
@@ -1373,7 +1425,7 @@ export type OnUpdateAnswerModelSubscription = {
     } | null,
     selectedOptions: Array< string | null >,
     updatedAt?: string | null,
-    userId: string,
+    userId?: string | null,
   } | null,
 };
 

@@ -24,6 +24,7 @@ export const createAnswerModel = /* GraphQL */ `mutation CreateAnswerModel(
       __typename
     }
     createdAt
+    formId
     questionId
     questions {
       createdAt
@@ -161,6 +162,7 @@ export const deleteAnswerModel = /* GraphQL */ `mutation DeleteAnswerModel(
       __typename
     }
     createdAt
+    formId
     questionId
     questions {
       createdAt
@@ -298,6 +300,7 @@ export const updateAnswerModel = /* GraphQL */ `mutation UpdateAnswerModel(
       __typename
     }
     createdAt
+    formId
     questionId
     questions {
       createdAt
